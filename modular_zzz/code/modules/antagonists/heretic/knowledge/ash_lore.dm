@@ -1,14 +1,14 @@
 /datum/heretic_knowledge/ultimate/ash_final
 	name = "Ashlord's Rite"
-	desc = "The ascension ritual of the Path of Ash. \
-		Bring 3 burning or husked corpses to a transmutation rune to complete the ritual. \
-		When completed, you become a harbinger of flames, gaining two abilites. \
-		Cascade, which causes a massive, growing ring of fire around you, \
-		and Oath of Flame, causing you to passively create a ring of flames as you walk. \
-		Some ashen spells you already knew will be empowered as well. \
-		You will also become immune to flames, space, and similar environmental hazards."
-	gain_text = "The Watch is dead, the Nightwatcher burned with it. Yet his fire burns evermore, \
-		for the Nightwatcher brought forth the rite to mankind! His gaze continues, as now I am one with the flames, \
-		WITNESS MY ASCENSION, THE ASHY LANTERN BLAZES ONCE MORE!"
-	announcement_text = "%SPOOKY% Fear the blaze, for the Ashlord, %NAME% has ascended! The flames shall consume all! %SPOOKY%"
+	desc = "Ритуал вознесения Пути Пепла. \
+        Принесите 3 горящих или обугленных трупа на руну транс мутации для завершения ритуала. \
+        После завершения вы станете предвестником пламени, получив две новые способности\
+        Каскад, вызывает огненное кольцо, растущее до гигантских размеров, \
+        и Клятва Пламени, вызывает огонь при каждом вашем шаге \
+        Некоторые из заклинаний что вы и так знали, будут усилены \
+        Также вы станете устойчивы к огню, космосу, и другим внешним опасностям"
+	gain_text = "Дозор пал, и Ночной Смотритель был обращён в пепел, но не погас его огонь \
+        ведь принёс он людям священный обряд! Очи его открыли свой взор на меня, ведь я стал единым с пламенем, \
+        УЗРИТЕ МОЁ ВОЗНЕСЕНИЕ, ДА ВОСПЫЛАЕТ ЖЕ ПЕПЕЛЬНЫЙ ФОНАРЬ ВНОВЬ!"
+	announcement_text = "%SPOOKY% Страшись огня, ибо Владыка Пепла, %NAME% был пробуждён! Пламя поглотит все что встретит у себя на пути! %SPOOKY%"
 	announcement_sound = 'modular_zzz/sounds/heretic/ash_lore.ogg'

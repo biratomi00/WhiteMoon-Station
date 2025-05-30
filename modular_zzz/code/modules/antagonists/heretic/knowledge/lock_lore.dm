@@ -1,15 +1,15 @@
 /datum/heretic_knowledge/ultimate/lock_final
 	name = "Unlock the Labyrinth"
-	desc = "The ascension ritual of the Path of Knock. \
-		Bring 3 corpses without organs in their torso to a transmutation rune to complete the ritual. \
-		When completed, you gain the ability to transform into empowered eldritch creatures \
-		and your keyblades will become even deadlier. \
-		In addition, you will create a tear to the Labyrinth's heart; \
-		a tear in reality located at the site of this ritual. \
-		Eldritch creatures will endlessly pour from this rift \
-		who are bound to obey your instructions."
-	gain_text = "The Stewards guided me, and I guided them. \
-		My foes were the Locks and my blades were the Key! \
-		The Labyrinth will be Locked no more, and freedom will be ours! WITNESS US!"
-	announcement_text = "Delta-class dimensional anomaly detec%SPOOKY% Reality rended, torn. Gates open, doors open, %NAME% has ascended! Fear the tide! %SPOOKY%"
+	desc = "Ритуал вознесения Пути Замка. \
+        Принесите 3 трупа без органов на руну трансмутации для завершения ритуала. \
+        По завершению ритуала вам будет дарована возможность перевоплощается в элдрических тварей \
+        и ваши клинки станут сильнее. \
+        Кроме того, вы создадите разрыв к сердцу Лабиринта; \
+        разрыв будет находиться на месте проведения ритуала. \
+        Бесчисленное количество существ будет выходить из него, \
+        и их обязанностью будет служение вам."
+	gain_text = "Проводники обучали меня - а я обучал их. \
+		Враги мои были замками - клинки мои стали Ключами! \
+		Лабиринт более не будет скован цепями - свобода близка! УЗРИТЕ НАШЕ ПРИШЕСТВИЕ!"
+	announcement_text = "Зафиксирована аномалия класса-Дельта%SPOOKY% Реальность разорвана. Врата распахнуты, %NAME% восходит! Страшитесь волны! %SPOOKY%"
 	announcement_sound = 'sound/music/antag/heretic/ascend_knock.ogg'

@@ -1,11 +1,12 @@
 /datum/heretic_knowledge/ultimate/rust_final
 	name = "Rustbringer's Oath"
-	desc = "The ascension ritual of the Path of Rust. \
-		Bring 3 corpses to a transmutation rune on the bridge of the station to complete the ritual. \
-		When completed, the ritual site will endlessly spread rust onto any surface, stopping for nothing. \
-		Additionally, you will become extremely resilient on rust, healing at triple the rate \
-		and becoming immune to many effects and dangers \ You will be able to rust almost anything upon ascending."
-	gain_text = "Champion of rust. Corruptor of steel. Fear the dark, for the RUSTBRINGER has come! \
-		The Blacksmith forges ahead! Rusted Hills, CALL MY NAME! WITNESS MY ASCENSION!"
-	announcement_text = "%SPOOKY% Fear the decay, for the Rustbringer, %NAME% has ascended! None shall escape the corrosion! %SPOOKY%"
+	desc = "Ритуал вознесения Пути Ржавчины. \
+        Принесите 3 трупа на руну трансмутации что находится на мостике станции, чтобы завершить ритуал. \
+        По завершении ритуал будет бесконечно распространять ржавчину, на любую поверхность не останавливаясь. \
+        Кроме того, вы станете чрезвычайно устойчивыми находясь на ржавчине, восстанавливаюсь в три раза быстрее \
+        и становясь невосприимчивым ко многим воздействиям и опасностям \
+        Вы получите возможность покрыть ржавчиной все что только пожелаете."
+	gain_text = "Чемпион ржавчины. Разрушитель стали. Трепещите перед тьмой - ибо РЖАВЫЙ КУЗНЕЦ пробудился! \
+		ГРОХОТ НАКОВАЛЬНИ! ПРОКЛЯТЫЕ РУДНИКИ, ВОПИТЕ МОЁ ИМЯ! УЗРИТЕ МОЁ ВОСХОЖДЕНИЕ!"
+	announcement_text = "%SPOOKY% Дрожите пред ржавчиной, ведь Ржавый Кузнец, %NAME% восстал! Ничто не избежит коррозии! %SPOOKY%"
 	announcement_sound = 'modular_zzz/sounds/heretic/rust_lore.ogg'

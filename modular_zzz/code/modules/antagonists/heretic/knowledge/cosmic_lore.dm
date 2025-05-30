@@ -1,17 +1,17 @@
 /datum/heretic_knowledge/ultimate/cosmic_final
 	name = "Creators's Gift"
-	desc = "The ascension ritual of the Path of Cosmos. \
-		Bring 3 corpses with bluespace dust in their body to a transmutation rune to complete the ritual. \
-		When completed, you become the owner of a Star Gazer. \
-		You will be able to command the Star Gazer with Alt+click. \
-		You can also give it commands through speech. \
-		The Star Gazer is a strong ally who can even break down reinforced walls. \
-		The Star Gazer has an aura that will heal you and damage opponents. \
-		Star Touch can now teleport you to the Star Gazer when activated in your hand. \
-		Your cosmic expansion spell and your blades also become greatly empowered."
-	gain_text = "The Beast held out its hand, I grabbed hold and they pulled me to them. Their body was towering, but it seemed so small and feeble after all their tales compiled in my head. \
-		I clung on to them, they would protect me, and I would protect it. \
-		I closed my eyes with my head laid against their form. I was safe. \
-		WITNESS MY ASCENSION!"
-	announcement_text = "%SPOOKY% A Star Gazer has arrived into the station, %NAME% has ascended! This station is the domain of the Cosmos! %SPOOKY%"
+	desc = "Ритуал вознесения Пути Космоса. \
+        Принеси 3 трупа с блюспейс пылью в их телах на руну транс мутации, чтобы завершить ритуал. \
+        По завершению, вы становитесь владельцем Star Gazer. \
+        Вы сможете управлять им с помощью Alt+click. \
+        Также вы сможете давать ему команды с помощью речи. \
+        Star Gazer крайне сильный союзник, ведь он может разрушить укреплённые стены. \
+        Star Gazer имеет ауру что восстановит своего владельца и навредит противникам. \
+        Star Touch может телепортировать тебя к Star Gazer после активации в руке. \
+        Ваши заклинания а также ваши клинки становятся значительно сильнее."
+	gain_text = "Зверь протянул когтистую длань, ухватившись за неё, он потянул меня за собой. Его тело возвышалось над всем, что было вокруг, но в сравнении с легендами, что были у меня в голове, он казался ничтожно мал, и таким хрупким. \
+        Я прижался к нему. Он защитит меня, а я его. \
+        Уложив голову на его шкуру, я закрыл глаза. Я был в безопасности. \
+        УЗРИТЕ ЖЕ МОЁ ВОЗНЕСЕНИЕ!"
+	announcement_text = "%SPOOKY% Сквозь пустоту, явился, Звёздный Следопыт, %NAME% был вознесён! Отныне стены этой станции чертоги Бездны! %SPOOKY%"
 	announcement_sound = 'sound/music/antag/heretic/ascend_cosmic.ogg'
