@@ -10414,6 +10414,7 @@
 #include "modular_zzz\code\modules\uplink\uplink_items\badass.dm"
 #include "modular_zzz\code\modules\uplink\uplink_items\dangerous.dm"
 #include "modular_zzz\modules\cme\code\cme.dm"
+#include "modular_zzz\modules\complany_imports\code\armament_datums\microstar_energy.dm"
 #include "modular_zzz\modules\crowbar_hit_plitka\code.dm"
 #include "modular_zzz\modules\customization\ears.dm"
 #include "modular_zzz\modules\customization\neck.dm"
