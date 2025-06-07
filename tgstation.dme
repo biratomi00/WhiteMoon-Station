@@ -10345,7 +10345,6 @@
 #include "modular_zzz\code\game\machinery\jukebox.dm"
 #include "modular_zzz\code\game\objects\effects\posters.dm"
 #include "modular_zzz\code\game\objects\items\drugs.dm"
-#include "modular_zzz\code\game\objects\items\miscellaneous.dm"
 #include "modular_zzz\code\game\objects\items\food\monkeycube.dm"
 #include "modular_zzz\code\game\objects\items\storage\uplink_kits.dm"
 #include "modular_zzz\code\modules\antagonists\heretic\knowledge\blade_lore.dm"
@@ -10438,4 +10437,5 @@
 #include "modular_zzz\modules\translate\laws-translate\laws_station_sided.dm"
 #include "modular_zzz\modules\translate\station_goals\station_goals.dm"
 #include "modular_zzz\modules\void\void.dm"
+#include "modular_zzz\code\game\objects\items\miscellaneous.dm"
 // END_INCLUDE
