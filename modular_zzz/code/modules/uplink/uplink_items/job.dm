@@ -11,7 +11,7 @@
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
 	surplus = 10
 
-/datum/uplink_item/role_restricted/blastcannon - BUBBER REMOVE START
+/datum/uplink_item/role_restricted/blastcannon
 	name = "Blast Cannon"
 	desc = "A highly specialized weapon, the Blast Cannon is actually relatively simple. It contains an attachment for a tank transfer valve mounted to an angled pipe specially constructed \
 			withstand extreme pressure and temperatures, and has a mechanical trigger for triggering the transfer valve. Essentially, it turns the explosive force of a bomb into a narrow-angle \
