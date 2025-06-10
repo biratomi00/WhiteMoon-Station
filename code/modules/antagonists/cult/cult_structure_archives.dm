@@ -62,4 +62,5 @@
 #undef CULT_BLINDFOLD
 #undef CURSE_ORB
 #undef VEIL_WALKER
+#undef VEIL_TORCH
 #undef CRIMSON_MEDALLION
