@@ -1,4 +1,5 @@
 /datum/action/cooldown/spell/aoe/area_conversion/weak
+	name = "Lesser Area Conversion"
 	cooldown_time = 30 SECONDS
 
 /datum/action/cooldown/spell/conjure/cult_door
