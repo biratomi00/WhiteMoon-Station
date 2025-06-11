@@ -1,6 +1,6 @@
 /datum/uplink_item/contractor/upgraded_modsuit
 	name = "Upgraded Contractor MODsuit"
-	desc = "A bit better armored and comfortable version of your already used MODsuit. \
+	desc = "A bit better, fire-proof, armored and comfortable version of your already used MODsuit. \
 		It has pre-equipped jetpack and in-built baton holster, \
 		so you will not loose it anymore."
 	item = /obj/item/mod/control/pre_equipped/contractor/upgraded
