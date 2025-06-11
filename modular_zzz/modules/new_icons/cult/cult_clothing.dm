@@ -10,3 +10,6 @@
 
 /obj/item/clothing/head/hooded/cult_hoodie/hardened
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/suit/hooded/cultrobes/hardened
+	flags_inv = HIDEJUMPSUIT | HIDETAIL
