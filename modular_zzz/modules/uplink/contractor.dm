@@ -44,6 +44,6 @@
 	name = "Magnetic Deployment Module"
 	desc = "A much more modern version of a springlock system. \
 		This is a module that uses magnets to speed up the deployment and retraction time of your MODsuit."
-	/obj/item/mod/module/springlock/contractor
+	item = /obj/item/mod/module/springlock/contractor
 	limited_stock = 1
 	cost = 1
