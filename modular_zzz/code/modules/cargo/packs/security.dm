@@ -4,26 +4,35 @@
 // Оружие с ГанКарго - плюс десять тысяч.
 // Оружие имеет ОП - плюс десять тысяч.
 
-/datum/supply_pack/security/microfusion
+// /datum/supply_pack/security/microfusion // 250 за каждую деталь от МКР.
+// 	cost = PAYCHECK_COMMAND * 10
 
-/datum/supply_pack/security/disabler
+/datum/supply_pack/security/disabler // Три дизаблера. Каждый по 400. Максималка - четыре стамкрита за зарядку.
+	cost = PAYCHECK_COMMAND * 12
 
-/datum/supply_pack/security/eland
+/datum/supply_pack/security/eland // 1200 кредитов за каждый набор оружия, их тут три.
+	cost = PAYCHECK_COMMAND * 36
 
-/datum/supply_pack/security/plasma_marksman
+/datum/supply_pack/security/plasma_marksman // 1200 кредитов за набор оружия.
+	cost = PAYCHECK_COMMAND * 12
 
-/datum/supply_pack/security/laser
+/datum/supply_pack/security/laser // 500 кредитов за каждый лазганчик.
+	cost = PAYCHECK_COMMAND * 15
 
-/datum/supply_pack/security/mcr01_attachments_a
+// /datum/supply_pack/security/mcr01_attachments_a // 250 за каждую деталь от МКР.
+// 	cost = PAYCHECK_COMMAND * 10
 
-/datum/supply_pack/security/mcr01_attachments_b
+// /datum/supply_pack/security/mcr01_attachments_b // 250 за каждую деталь от МКР.
+// 	cost = PAYCHECK_COMMAND * 10
 
-/datum/supply_pack/security/miecz
+/datum/supply_pack/security/miecz // Двенадцать выстрелов на хардкрит без учёта брони. Достаточно дешёвое огнестрельное оружие за 1600.
+	cost = PAYCHECK_COMMAND * 16
 
-/datum/supply_pack/security/miniegun
+/datum/supply_pack/security/miniegun // 600 за миниеганчик.
+	cost = PAYCHECK_COMMAND * 6
 
-/datum/supply_pack/security/sidearmcrate
+/datum/supply_pack/security/sidearmcrate // 1200 кредитов за каждый набор оружия, их тут два.
+	cost = PAYCHECK_COMMAND * 24
 
-/datum/supply_pack/security/wespe
-
-
+/datum/supply_pack/security/wespe // 1200 кредитов за каждый набор оружия, их тут три.
+	cost = PAYCHECK_COMMAND * 36
