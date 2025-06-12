@@ -13,6 +13,6 @@
 	desc = "A rather plain pair of shoulder holsters with a bit of insulated padding inside. \
 	Meant to hold a twinned pair of thermal pistols, but can fit several kinds of energy handguns as well."
 	item = /obj/item/storage/belt/holster/energy/thermal
-	cost = 14
+	cost = 10
 	surplus = 25
 	purchasable_from = ~UPLINK_CLOWN_OPS
