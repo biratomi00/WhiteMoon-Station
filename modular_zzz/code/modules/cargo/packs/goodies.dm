@@ -59,4 +59,4 @@
 	cost = PAYCHECK_COMMAND * 36
 
 /datum/supply_pack/goody/plasma_projector  // 900 кредитов за набор оружия.
-	cost = PAYCHECK_COMMAND * 900
+	cost = PAYCHECK_COMMAND * 9
