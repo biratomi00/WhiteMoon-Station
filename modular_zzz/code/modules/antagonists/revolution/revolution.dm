@@ -31,7 +31,7 @@
 // 			if(!account)
 // 				continue
 
-// 			account.change_salary(null, "CentComm", "CentComm", "Admin", force_rate = -50)	//halve the salary of all staff except heads
+// 			account.change_salary(null, "CentCom", "CentCom", "Admin", force_rate = -50)	//halve the salary of all staff except heads
 
 // 	else if(last_command_report == 1 && world.time >= 30 MINUTES)
 // 		priority_announce("Согласно статистике, бесконтрольный досуг и сопутствующая ему деятельность пагубно влияют на производительность наших станций. Вам необходимо закрыть голопалубу, театр, бар и любые другие увеселительные заведения. Питание персонала следует организовать посредством торговых автоматов и столовой.")
