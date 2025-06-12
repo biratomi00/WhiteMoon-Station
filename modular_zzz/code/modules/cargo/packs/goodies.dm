@@ -49,11 +49,14 @@
 /datum/supply_pack/goody/ceremonial_rifle // Достаточно убийственная винтовка с прицелом. За один магазин кладёт трёх мартышек. Одна штука за 3200.
 	cost = PAYCHECK_COMMAND * 32
 
+/datum/supply_pack/goody/sakhno_derringer_single // Стандартный баллистический пистолетик.
+	cost = PAYCHECK_COMMAND * 12
+
 /datum/supply_pack/goody/sol_pistol_single // Меньше урона, чем у m1911, но зато шанс оторвать конечности.
 	cost = PAYCHECK_COMMAND * 36
 
 /datum/supply_pack/goody/sol_revolver_single // Меньше урона, чем у m1911, но зато шанс оторвать конечности.
 	cost = PAYCHECK_COMMAND * 36
 
-/datum/supply_pack/goody/plasma_projector  // 1200 кредитов за набор оружия.
-	cost = PAYCHECK_COMMAND * 12
+/datum/supply_pack/goody/plasma_projector  // 900 кредитов за набор оружия.
+	cost = PAYCHECK_COMMAND * 900

@@ -1,5 +1,8 @@
 // Увеличил стоимость всего в два раза.
 
+/datum/armament_entry/company_import/micron/ammo/cell_plasma
+	cost = PAYCHECK_CREW * 2
+
 /datum/armament_entry/company_import/micron/ammo/cell
 	cost = PAYCHECK_CREW * 2
 
