@@ -10408,6 +10408,7 @@
 #include "modular_zzz\code\modules\clothing\outfits\outfit.dm"
 #include "modular_zzz\code\modules\clothing\outfits\inteq\ert.dm"
 #include "modular_zzz\code\modules\clothing\suits\suits.dm"
+#include "modular_zzz\code\modules\clothing\under\under.dm"
 #include "modular_zzz\code\modules\language\acratarian.dm"
 #include "modular_zzz\code\modules\language\catcrin.dm"
 #include "modular_zzz\code\modules\loadout\categories\head.dm"
