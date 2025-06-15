@@ -47,7 +47,7 @@
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/ammo_box/magazine/m38/match)
 
-/datum/supply_pack/goody/rubber
+/datum/supply_pack/goody/rubberbr
 	name = ".38 Rubber Magazine Single-Pack"
 	desc = "Contains one magazine of bouncy rubber .38 ammunition, for when you want to bounce your shots off anything and everything."
 	cost = PAYCHECK_CREW * 1.5
@@ -112,12 +112,12 @@
 	access_view = ACCESS_WEAPONS
 	contains = list(/obj/item/weaponcrafting/gunkit/hellgun)
 
-/datum/supply_pack/goody/thermal_single
-	name = "Thermal Pistol Holster Single-Pack"
-	desc = "Contains twinned thermal pistols in a holster, ready for use in the field."
-	cost = PAYCHECK_COMMAND * 15
-	access_view = ACCESS_WEAPONS
-	contains = list(/obj/item/storage/belt/holster/energy/thermal)
+// /datum/supply_pack/goody/thermal_single
+// 	name = "Thermal Pistol Holster Single-Pack"
+// 	desc = "Contains twinned thermal pistols in a holster, ready for use in the field."
+// 	cost = PAYCHECK_COMMAND * 15
+// 	access_view = ACCESS_WEAPONS
+// 	contains = list(/obj/item/storage/belt/holster/energy/thermal)
 
 /datum/supply_pack/goody/sologamermitts
 	name = "Insulated Gloves Single-Pack"
