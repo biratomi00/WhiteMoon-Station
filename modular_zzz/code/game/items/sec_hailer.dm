@@ -78,4 +78,3 @@
 	balloon_alert_to_viewers("Backup Requested!", "Backup Requested!", 7)
 	log_combat(usr, src, "has called for backup")
 	playsound(usr, 'sound/items/whistle/whistle.ogg', 50, FALSE, 4)
-
