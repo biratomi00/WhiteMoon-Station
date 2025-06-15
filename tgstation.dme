@@ -10353,6 +10353,7 @@
 #include "modular_zzz\code\datums\ruins\space.dm"
 #include "modular_zzz\code\game\hos_color_changer.dm"
 #include "modular_zzz\code\game\gamemodes\objectives.dm"
+#include "modular_zzz\code\game\items\sec_hailer.dm"
 #include "modular_zzz\code\game\machinery\handled_jukebox.dm"
 #include "modular_zzz\code\game\machinery\jukebox.dm"
 #include "modular_zzz\code\game\objects\effects\posters.dm"
