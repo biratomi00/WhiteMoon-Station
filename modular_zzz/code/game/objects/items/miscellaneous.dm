@@ -31,7 +31,8 @@
 		pets = list(
 		"Alta" = /mob/living/basic/pet/cat/alta,
 		"Space Alta" = /mob/living/basic/pet/cat/space/alta,
-		"Jruttie" = /mob/living/basic/pet/cat/jruttie
+		"Jruttie" = /mob/living/basic/pet/cat/jruttie,
+		"Space Aiko" = /mob/living/basic/pet/fox/renault/space_aiko
 		)
 	return pets
 
