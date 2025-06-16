@@ -121,6 +121,7 @@
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = TCMB
 	maximum_survivable_temperature = T0C + 40
+	worn_slot_flags = ITEM_SLOT_HEAD
 	icon = 'modular_zzz/icons/mob/simple/pets.dmi'
 	held_lh = 'modular_zzz/icons/mob/inhands/pets/pets_held_lh.dmi'
 	held_rh = 'modular_zzz/icons/mob/inhands/pets/pets_held_rh.dmi'
