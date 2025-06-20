@@ -118,16 +118,16 @@
 
 	"infection_advice": [
 		"Держись от меня подальше!",
-		"@pick(add_name)держись от меня подальше.",
-		"@pick(add_name)не подходи.",
-		"@pick(add_name)будь осторожен.",
-		"@pick(add_name)помоги мне.",
-		"@pick(add_name)убей меня.",
+		"@pick(add_name)держись от меня подальше",
+		"@pick(add_name)не подходи",
+		"@pick(add_name)будь осторожен",
+		"@pick(add_name)помоги мне",
+		"@pick(add_name)убей меня",
 		"Не подходите ближе!",
 		"Будь осторожней!",
 		"Помоги мне!",
 		"УБЕЙ МЕНЯ!!",
-		"Убей меня!!!"
+		"Убей меня!!"
 	],
 
 	"people": [
@@ -225,28 +225,31 @@
 	],
 
 	"location": [
-		"разгерма у @pick(sublocation)",
-		"мостике",
+		"разгермы у @pick(sublocation)",
+		"мостика",
 		"оружейной",
-		"бриге",
-		"научка",
+		"Брига",
+		"научки",
+		"РНД",
 		"ксенобиологии",
-		"инженерке",
-		"карго",
-		"медбее",
-		"атмосе",
-		"техах",
-		"техах @pick(sublocation)",
+		"инженерки",
+		"Карго",
+		"Отдела Снабжения",
+		"медбея",
+		"медибея",
+		"атмоса",
+		"техов",
+		"техов @pick(sublocation)",
 		"вирусологии",
-		"морге",
-		"офисе Главы Персонала",
+		"морга",
+		"офиса Главы Персонала",
 		"капитанской",
 		"церкви",
-		"библиотеке",
+		"библиотеки",
 		"ассистентской",
-		"ботанике",
+		"ботаники",
 		"кухни",
-		"спутнике ИИ"
+		"спутника ИИ"
 	],
 
 	"sublocation": [
@@ -272,26 +275,6 @@
 		"спутника ИИ"
 	],
 
-	"advice": [
-		"Good luck. You'll need it.",
-		"Hmm...not sure about that.",
-		"Just do it.",
-		"Kill that person. You know who.",
-		"Look out!",
-		"No. Stop what you're doing.",
-		"Something is coming.",
-		"Something is wrong.",
-		"That person wants to kill you.",
-		"They're coming for you.",
-		"They're out to get you.",
-		"This will end badly.",
-		"Trust that person.",
-		"Trust no-one.",
-		"Yes. You're doing the right thing.",
-		"You have my permission. Do it.",
-		"You should be wary of that person.",
-		"You should go somewhere else. Quickly."
-	],
 	"advice": [
 		"Хмм... даже не знаю.",
 		"Да. Ты все делаешь правильно.",
