@@ -10367,6 +10367,7 @@
 #include "modular_zzz\code\game\objects\items\drugs.dm"
 #include "modular_zzz\code\game\objects\items\miscellaneous.dm"
 #include "modular_zzz\code\game\objects\items\food\monkeycube.dm"
+#include "modular_zzz\code\game\objects\items\melee\misc.dm"
 #include "modular_zzz\code\game\objects\items\storage\uplink_kits.dm"
 #include "modular_zzz\code\modules\antagonists\heretic\knowledge\ash_lore.dm"
 #include "modular_zzz\code\modules\antagonists\heretic\knowledge\blade_lore.dm"
