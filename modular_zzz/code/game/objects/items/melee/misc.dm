@@ -4,6 +4,8 @@
 	name = "modkit"
 	desc = "A modkit for making something into something."
 	icon = 'modular_zzplurt/icons/obj/toys/plushes.dmi'
+	lefthand_file = 'modular_zzplurt/icons/mob/inhands/misc/plushes_lefthand.dmi'
+	righthand_file = 'modular_zzplurt/icons/mob/inhands/misc/plushes_right.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "box"
 	inhand_icon_state = "box"
@@ -30,6 +32,8 @@
 	name = "Kazeshini Katana Kit"
 	desc = "A modkit for making a Sabre into a Kazeshini Katana."
 	icon = 'modular_zzplurt/icons/obj/toys/plushes.dmi'
+	lefthand_file = 'modular_zzplurt/icons/mob/inhands/misc/plushes_lefthand.dmi'
+	righthand_file = 'modular_zzplurt/icons/mob/inhands/misc/plushes_right.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "box"
 	inhand_icon_state = "box"
