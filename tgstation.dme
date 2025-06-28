@@ -10451,6 +10451,7 @@
 #include "modular_zzz\code\modules\storytellers\storyteller_2_medium.dm"
 #include "modular_zzz\code\modules\storytellers\storyteller_3_high.dm"
 #include "modular_zzz\code\modules\storytellers\storyteller_vote.dm"
+#include "modular_zzz\code\modules\storytellers\event_defines\events.dm"
 #include "modular_zzz\code\modules\storytellers\event_defines\crewset\assault_ops.dm"
 #include "modular_zzz\code\modules\storytellers\event_defines\crewset\blob.dm"
 #include "modular_zzz\code\modules\storytellers\event_defines\crewset\blood_cult.dm"
