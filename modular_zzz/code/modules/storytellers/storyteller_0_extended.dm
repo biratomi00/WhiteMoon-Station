@@ -8,10 +8,11 @@
 	tag_multipliers = list(
 		TAG_COMBAT = 0,
 		TAG_DESTRUCTIVE = 1,
-		TAG_CHAOTIC = 0,
+		TAG_CHAOTIC = 1,
 		TAG_LOW = 1,
 		TAG_MEDIUM = 0,
-		TAG_HIGH = 0
+		TAG_HIGH = 0,
+		TAG_COMMUNAL = 1
 	)
 
 /datum/storyteller_data/tracks/extended_low_chaos
