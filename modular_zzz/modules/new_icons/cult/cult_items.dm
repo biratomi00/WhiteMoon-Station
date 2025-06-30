@@ -19,7 +19,7 @@
 		return
 
 	to_chat(user, "<span class='danger'>Вы разбиваете сферу! Темная сущность поднимается в воздух, затем исчезает.</span>")
-	playsound(user.loc, 'sound/effects/glassbr1.ogg', 50, 1)
+	playsound(user.loc, 'sound/effects/glass/glassbr1.ogg', 50, 1)
 	qdel(src)
 	sleep(pick(50, 100, 150, 200, 250))
 	var/datum/round_event_control/portal_storm_narsie/portal_storm_narsie = new/datum/round_event_control/portal_storm_narsie
