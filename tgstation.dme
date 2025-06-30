@@ -10479,6 +10479,7 @@
 #include "modular_zzz\modules\customization\markings\plain.dm"
 #include "modular_zzz\modules\customization\modules\mob\dead\new_player\sprite_accessories\taur_types.dm"
 #include "modular_zzz\modules\digitigrade_cybernetics\code\robot_bodyparts.dm"
+#include "modular_zzz\modules\antagonists\traitor\uplink\uplink_items\dangerous.dm"
 #include "modular_zzz\modules\new_icons\cult\cult_clothing.dm"
 #include "modular_zzz\modules\new_icons\cult\cult_items.dm"
 #include "modular_zzz\modules\new_icons\cult\cult_structures.dm"
@@ -10497,5 +10498,4 @@
 #include "modular_zzz\modules\uplink\job.dm"
 #include "modular_zzz\modules\uplink\suits.dm"
 #include "modular_zzz\modules\void\void.dm"
-#include "modular_zzz\modules\antagonists\traitor\uplink\uplink_items\dangerous.dm"
 // END_INCLUDE
