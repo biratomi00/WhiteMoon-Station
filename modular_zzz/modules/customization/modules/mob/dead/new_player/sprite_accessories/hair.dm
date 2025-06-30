@@ -397,22 +397,22 @@
 
 /datum/sprite_accessory/hair/nova/halfshavedlong
 	name = "Half-shaved long"
-	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/more_hair.dmi'
+	icon = 'modular_zzz/icons/mob/sprite_accessory/more_hair.dmi'
 	icon_state = "halfshave_long"
 
 /datum/sprite_accessory/hair/nova/halfshavedmessy
 	name = "Half-shaved messy"
-	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/more_hair.dmi'
+	icon = 'modular_zzz/icons/mob/sprite_accessory/more_hair.dmi'
 	icon_state = "halfshave_messy"
 
 /datum/sprite_accessory/hair/nova/halfshavedmessylong
 	name = "Half-shave long messy"
-	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/more_hair.dmi'
+	icon = 'modular_zzz/icons/mob/sprite_accessory/more_hair.dmi'
 	icon_state = "halfshave_messylong"
 
 /datum/sprite_accessory/hair/nova/halfshavedglamorous
 	name = "Half-shave glamorous"
-	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/more_hair.dmi'
+	icon = 'modular_zzz/icons/mob/sprite_accessory/more_hair.dmi'
 	icon_state = "halfshave_glamorous"
 
 /datum/sprite_accessory/hair/nova/emoshort
@@ -694,7 +694,7 @@
 // Facial hair
 
 /datum/sprite_accessory/facial_hair/nova
-	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/facialhair.dmi'
+	icon = 'modular_zzz/icons/mob/sprite_accessory/facialhair.dmi'
 
 /datum/sprite_accessory/facial_hair/nova/sideburns
 	name = "Sideburns"
