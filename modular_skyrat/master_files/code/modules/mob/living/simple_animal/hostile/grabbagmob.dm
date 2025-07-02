@@ -80,7 +80,6 @@
 	del_on_death = 1
 	rapid_melee = 2
 	footstep_type = FOOTSTEP_MOB_SHOE
-	ai_controller = /datum/ai_controller/basic_controller
 
 /mob/living/simple_animal/hostile/cult/ghost
 	name = "Blood Ghost"
