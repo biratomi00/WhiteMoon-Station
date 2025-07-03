@@ -200,7 +200,7 @@
 					else
 						climax_into_choice = "On [target_mob_them]"
 
-					if(climax_interaction && !manual && climax_interaction.show_climax(src, target_mob, interaction_position))
+					if(climax_interaction && !manual && climax_interaction.show_climax(src, target_mob, interaction_position, portal)) //I think gloryhole portals could be way less snowflakey
 						create_cum_decal = !interaction_inside
 					else if(!climax_into_choice)
 					//SPLURT EDIT CHANGE END

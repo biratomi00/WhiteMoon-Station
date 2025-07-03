@@ -134,6 +134,9 @@
 		if(!can_see(user, self))
 			data["self"] = body_relay.name
 	data["block_interact"] = user_interaction_component?.interact_next >= world.time // SPLURT EDIT - INTERACTIONS - Original: interact_next >= world.time
+	if(body_relay)
+		if(!can_see(user, self))
+			data["self"] = body_relay.name
 	data["interactions"] = categories
 
 	var/list/parts = list()
@@ -201,7 +204,6 @@
 
 			if(interact_next >= world.time)
 				return FALSE
-
 			if(body_relay && !can_see(user, self))
 				selected_interaction.act(source, target, body_relay)
 			else
