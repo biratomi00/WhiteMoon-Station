@@ -10445,6 +10445,7 @@
 #include "modular_zzz\code\modules\mob\living\emote.dm"
 #include "modular_zzz\code\modules\mob\living\basic\cult\constructs\artificer.dm"
 #include "modular_zzz\code\modules\mob\living\basic\pets\pets.dm"
+#include "modular_zzz\code\modules\mob\living\basic\space_fauna\space_dragon.dm"
 #include "modular_zzz\code\modules\mob\living\carbon\carbon.dm"
 #include "modular_zzz\code\modules\projectiles\projectile.dm"
 #include "modular_zzz\code\modules\projectiles\energy\thermal.dm"
