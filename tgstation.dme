@@ -10450,6 +10450,7 @@
 #include "modular_zzz\code\modules\projectiles\projectile.dm"
 #include "modular_zzz\code\modules\projectiles\energy\thermal.dm"
 #include "modular_zzz\code\modules\projectiles\guns\ballistic\automatic.dm"
+#include "modular_zzz\code\modules\reagents\reagent_dispenser.dm"
 #include "modular_zzz\code\modules\research\xenobiology\xenobiology.dm"
 #include "modular_zzz\code\modules\ruins\hilbertshotel_ghost.dm"
 #include "modular_zzz\code\modules\security\lockers.dm"
