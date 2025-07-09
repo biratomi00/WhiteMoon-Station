@@ -691,6 +691,9 @@
 /obj/item/bodypart/proc/heal_damage(brute, burn, updating_health = TRUE, forced = FALSE, required_bodytype)
 	SHOULD_CALL_PARENT(TRUE)
 
+	if(owner && HAS_TRAIT(owner, TRAIT_NONATURALHEAL) && !forced)
+		return
+
 	if(!forced && required_bodytype && !(bodytype & required_bodytype)) //So we can only heal certain kinds of limbs, ie robotic vs organic.
 		return
 
