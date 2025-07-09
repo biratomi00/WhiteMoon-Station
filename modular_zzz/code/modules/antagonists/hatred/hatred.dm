@@ -113,7 +113,7 @@
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_STATION)
 	RegisterSignal(H, COMSIG_LIVING_LIFE, PROC_REF(check_hatred_off_station)) // almost like anchor implant, but doesn't hurt
 	RegisterSignals(H, COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES, PROC_REF(on_try_healing)) // for AdjustXXXLoss()
-	addtimer(CALLBACK(src, PROC_REF(alarm_station)), 30 SECONDS, TIMER_DELETE_ME) // Give a player a moment to understand what's going on.
+	addtimer(CALLBACK(src, PROC_REF(alarm_station)), 10 SECONDS, TIMER_DELETE_ME) // Give a player a moment to understand what's going on.
 
 /datum/antagonist/hatred/proc/evaluate_security()
 	var/security_alive = length(SSjob.get_living_sec())
