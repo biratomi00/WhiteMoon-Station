@@ -12,7 +12,7 @@
 		TAG_MEDIUM = 0.5,
 		TAG_HIGH = 0.5
 	)
-	antag_divisor = 16
+	antag_divisor = 32
 
 /datum/storyteller_data/tracks/low_chaos
 	threshold_mundane = 1200
