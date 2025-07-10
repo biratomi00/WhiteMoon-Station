@@ -55,7 +55,7 @@
 	 * Level of available gear is determined by a number of alive security officers and blueshields.
 	 * 0 = low guns: a pistol or double barrel shotgun. NOT IMPLEMENTED YET!
 	 * 1 = default classic and serious guns: AK-12 or riot shotgun
-	 * 2 = ROBUST gear: +15 armor or +cursed belt |||| +fast executions + +1 life on low gear
+	 * 2 = ROBUST gear: +armor or +cursed belt |||| +fast executions + +1 life on low gear
 	 */
 	var/gear_level = 1
 	var/static/list/low_guns = list("Pistol", "Double-barreled shotgun") // NOT IMPLEMENTED YET!
@@ -436,26 +436,20 @@
 	name = "leather overcoat of Hatred"
 	desc = "The shabby leather overcoat with decent armor paddings. Once it has been splashed with blood you can't take it off anymore."
 	armor_type = /datum/armor/hatred
-	// clueless armor stats. A bit worse than red ert hardsuit and other types of hardsuits. decent versatile armor.
-	// armor = list(MELEE = 50, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 30, RAD = 10, FIRE = 75, ACID = 75, WOUND = 50)
 
-// clueless armor stats. A bit worse than red ert hardsuit and other types of hardsuits. decent versatile armor.
+// clueless armor stats.
 /datum/armor/hatred
-	melee = 50
-	bullet = 50
-	laser = 50
-	energy = 50
-	bomb = 50
-	bio = 30
-	fire = 75
 	acid = 75
+	bullet = 40
+	laser = 40
+	bomb = 40
+	bio = 40
+	fire = 70
+	acid = 70
 	wound = WOUND_ARMOR_STANDARD
 
-// level 2 gear upgrade. +15
+// level 2 gear upgrade. +20
 /datum/armor/hatred_more
-	melee = 65
-	bullet = 65
-	laser = 65
 	energy = 65
 	bomb = 65
 	bio = 45
