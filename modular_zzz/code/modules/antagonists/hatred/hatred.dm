@@ -573,8 +573,6 @@
 
 	switch(Ha.chosen_high_gear)
 		if("More armor")
-			// initial = 	list(MELEE = 50, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 30, RAD = 10, FIRE = 75, ACID = 75, WOUND = 50)
-			// 				list(MELEE = 65, BULLET = 65, LASER = 65, ENERGY = 65, BOMB = 65, BIO = 45, RAD = 25, FIRE = 90, ACID = 90, WOUND = 65)
 			var/obj/item/clothing/C = H.get_item_by_slot(ITEM_SLOT_OCLOTHING)
 			C.set_armor(/datum/armor/hatred_more)
 			C = H.get_item_by_slot(ITEM_SLOT_HEAD)
