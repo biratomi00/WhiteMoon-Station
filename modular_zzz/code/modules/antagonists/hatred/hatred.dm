@@ -456,7 +456,7 @@
 	laser = 60
 	energy = 60
 	bomb = 60
-	bio = 40
+	bio = 60
 	fire = 90
 	acid = 90
 	wound = WOUND_ARMOR_HIGH
