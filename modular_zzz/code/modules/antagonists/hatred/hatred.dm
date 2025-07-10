@@ -439,9 +439,10 @@
 
 // clueless armor stats.
 /datum/armor/hatred
-	acid = 75
+	melee = 40
 	bullet = 40
 	laser = 40
+	energy = 40
 	bomb = 40
 	bio = 40
 	fire = 70
@@ -450,9 +451,12 @@
 
 // level 2 gear upgrade. +20
 /datum/armor/hatred_more
-	energy = 65
-	bomb = 65
-	bio = 45
+	melee = 60
+	bullet = 60
+	laser = 60
+	energy = 60
+	bomb = 60
+	bio = 40
 	fire = 90
 	acid = 90
 	wound = WOUND_ARMOR_HIGH
