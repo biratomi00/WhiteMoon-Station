@@ -587,7 +587,7 @@
 			new /obj/item/ammo_box/advanced/s12gauge(P)
 			// new /obj/item/ammo_box/advanced/s12gauge/incendiary(P)
 			new /obj/item/ammo_box/advanced/s12gauge/flechette(P)
-			new /obj/item/ammo_box/advanced/s12gauge/express(P)
+			// new /obj/item/ammo_box/advanced/s12gauge/express(P)
 			new /obj/item/ammo_box/advanced/s12gauge/dragonsbreath(P)
 			new /obj/item/ammo_box/advanced/s12gauge/frangible(P)
 			// new /obj/item/ammo_box/advanced/s12gauge/breaching(P)
