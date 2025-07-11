@@ -43,7 +43,7 @@
 /datum/antagonist/hatred
 	name = "\improper Mass Shooter"
 	antagpanel_category = "Mass Shooter"
-	// roundend_category = "mass shooter"
+	roundend_category = "Mass Shooter"
 	pref_flag = ROLE_LONE_OPERATIVE
 	antag_moodlet = /datum/mood_event/focused
 	suicide_cry = "I REGRET NOTHING."
@@ -66,9 +66,14 @@
 	var/chosen_high_gear = null
 
 /datum/antagonist/hatred/greet()
+	/*
 	SEND_SOUND(owner.current, sound(pick('modular_zzz/code/modules/antagonists/hatred/hatred_begin_1.ogg', \
 										'modular_zzz/code/modules/antagonists/hatred/hatred_begin_2.ogg', \
 										'modular_zzz/code/modules/antagonists/hatred/hatred_begin_3.ogg')))
+	*/
+	playsound(owner.current, pick('modular_zzz/code/modules/antagonists/hatred/hatred_begin_1.ogg', \
+					'modular_zzz/code/modules/antagonists/hatred/hatred_begin_2.ogg', \
+					'modular_zzz/code/modules/antagonists/hatred/hatred_begin_3.ogg'), vol = 50, vary = FALSE, ignore_walls = FALSE)
 	var/greet_text
 	greet_text += "Ты - [span_red(span_bold("Безымянный Убийца"))]. Твое прошлое совершенно неважно, и даже если оно было, оно было незавидным.<br>"
 	greet_text += "Ты испытываешь непреодолимую ненависть, отвращение и презрение ко всем окружающим.<br>"
@@ -359,6 +364,7 @@
 
 /obj/item/storage/pouch/ammo/hatred/Initialize(mapload)
 	. = ..()
+	atom_storage.max_total_storage = INFINITY // only for weight calculations. it still has type and slots limits
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 	atom_storage.numerical_stacking = FALSE
 	atom_storage.attack_hand_interact = TRUE
@@ -436,6 +442,7 @@
 	name = "leather overcoat of Hatred"
 	desc = "The shabby leather overcoat with decent armor paddings. Once it has been splashed with blood you can't take it off anymore."
 	armor_type = /datum/armor/hatred
+	resistance_flags = FIRE_PROOF
 
 // clueless armor stats.
 /datum/armor/hatred
@@ -475,6 +482,7 @@
 	name = "Veil of Hatred"
 	desc = "Once you felt <b><i>that</i></b> urge to commit relentless genocide of civilians, you clearly understood you were cursed... blessed... and... protected by invisible spirit of Hatred."
 	armor_type = /datum/armor/hatred
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/invisihat/hatred/equipped(mob/user, slot)
 	. = ..()
@@ -565,11 +573,15 @@
 			new /obj/item/ammo_box/magazine/ak12(P)
 		if("Riot Shotgun")
 			P.atom_storage.set_holdable(list(/obj/item/ammo_box/advanced/s12gauge), list(), list(/obj/item/ammo_box/advanced/s12gauge))
-			P.atom_storage.max_slots = 4
-			new /obj/item/ammo_box/advanced/s12gauge/buckshot(P)
+			P.atom_storage.max_slots = 10
+			new /obj/item/ammo_box/advanced/s12gauge/magnum(P)
 			new /obj/item/ammo_box/advanced/s12gauge(P)
-			new /obj/item/ammo_box/advanced/s12gauge/incendiary(P)
+			// new /obj/item/ammo_box/advanced/s12gauge/incendiary(P)
 			new /obj/item/ammo_box/advanced/s12gauge/flechette(P)
+			new /obj/item/ammo_box/advanced/s12gauge/express(P)
+			new /obj/item/ammo_box/advanced/s12gauge/dragonsbreath(P)
+			new /obj/item/ammo_box/advanced/s12gauge/frangible(P)
+			// new /obj/item/ammo_box/advanced/s12gauge/breaching(P)
 
 	switch(Ha.chosen_high_gear)
 		if("More armor")
