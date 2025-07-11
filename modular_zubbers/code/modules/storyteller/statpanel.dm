@@ -6,4 +6,4 @@
 	if(client?.holder)
 		. += "Storyteller: [SSgamemode.storyteller.name]"
 	else
-		. += "Storyteller: [SSgamemode.statpanel_display]"
+		. += "Storyteller: [SSgamemode.storyteller.name]"
