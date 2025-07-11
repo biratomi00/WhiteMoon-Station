@@ -111,7 +111,7 @@
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, "hatred")
 	ADD_TRAIT(H, TRAIT_DRINKS_BLOOD, "hatred") // why not
 	ADD_TRAIT(H, TRAIT_EVIL, "hatred")
-	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, "hatred")
+	// ADD_TRAIT(H, TRAIT_NOSOFTCRIT, "hatred")
 	H.add_movespeed_mod_immunities("hatred", /datum/movespeed_modifier/damage_slowdown)
 	// H.revive(ADMIN_HEAL_ALL)
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_CENTCOM)
