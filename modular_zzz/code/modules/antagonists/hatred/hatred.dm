@@ -666,6 +666,7 @@
 	weight = 20
 	max_occurrences = 1
 	min_players = 20 // для малфа нужно 20. и для демона резни. пусть будет так. меньше не надо - некого убивать.
+	earliest_start = 40 MINUTES
 	category = EVENT_CATEGORY_ENTITIES // bloodshed. genocide. quite simple desires.
 	description = "The Man without a name is about to commit ruthless genocide of crewmembers."
 
