@@ -119,6 +119,7 @@
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_STATION)
 	RegisterSignal(H, COMSIG_LIVING_LIFE, PROC_REF(check_hatred_off_station)) // almost like anchor implant, but doesn't hurt
 	RegisterSignals(H, COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES, PROC_REF(on_try_healing)) // for AdjustXXXLoss()
+	RegisterSignal(H, COMSIG_MOB_EQUIPPED_ITEM, PROC_REF(check_knife)) // any knife we pick might be our deadliest weapon
 	addtimer(CALLBACK(src, PROC_REF(alarm_station)), 10 SECONDS, TIMER_DELETE_ME) // Give a player a moment to understand what's going on.
 
 /datum/antagonist/hatred/proc/evaluate_security()
@@ -177,11 +178,8 @@
 	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/gateway))
 	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/teleporter))
 	// possible_spawns += get_safe_random_station_turf(typesof(/area/station/cargo)) // for debug at Runtime Station
-	// for(var/turf/X in GLOB.generic_maintenance_landmarks) //Some xeno spawns are in some spots that will instantly kill human, like atmos
-	// 	if(istype(X.loc, /area/maintenance))
-	// 		possible_spawns += X
-	// possible_spawns += GLOB.generic_maintenance_landmarks
-	possible_spawns += find_maintenance_spawn(atmos_sensitive = TRUE)
+	for(var/i = 1; i <= 4; i++) // to increase chances for antag to spawn in maints.
+		possible_spawns += find_maintenance_spawn(atmos_sensitive = TRUE)
 	list_clear_nulls((possible_spawns))
 	var/turf/chosen_spawn = length(possible_spawns) ? pick(possible_spawns) : find_safe_turf(extended_safety_checks = TRUE, dense_atoms = FALSE) // in case of some huge map problems
 	owner.current.forceMove(chosen_spawn)
@@ -209,10 +207,55 @@
 							Особые приметы: мужчина в длинном черном кожаном пальто с длинными черными волосами и [chosen_gun].", \
 							"ALERT: MASS SHOOTER!", chosen_sound, has_important_message = TRUE)
 
+/// we check if we picked up a knife in our hand. if so, we listen to it when it strikes its target.
+/datum/antagonist/hatred/proc/check_knife(mob/source, obj/item/I, slot)
+	SIGNAL_HANDLER
+	if(istype(I, /obj/item/knife) && slot == ITEM_SLOT_HANDS && ishuman(source))
+		RegisterSignal(I, COMSIG_ITEM_ATTACK, PROC_REF(knife_check_glory))
+		RegisterSignal(I, COMSIG_ITEM_DROPPED, PROC_REF(remove_knife_check_glory))
+
+/// once we don't hold a knife, we don't listen to it when it strikes.
+/datum/antagonist/hatred/proc/remove_knife_check_glory(obj/item/knife/K, mob/user)
+	SIGNAL_HANDLER
+	UnregisterSignal(K, COMSIG_ITEM_ATTACK)
+	UnregisterSignal(K, COMSIG_ITEM_DROPPED)
+
+/// if we strike a target and it meets certain criteria - we handle it in a special way.
+/datum/antagonist/hatred/proc/knife_check_glory(obj/item/knife/K, mob/living/target_mob, mob/user, list/modifiers, list/attack_modifiers)
+	SIGNAL_HANDLER
+	if(ishuman(target_mob) && ishuman(user) && target_mob != user)
+		if(length(attack_modifiers) && attack_modifiers[FORCE_OVERRIDE] == 200) // no need to check. the lethal strike is about to blown.
+			addtimer(CALLBACK(K, TYPE_PROC_REF(/obj/item/knife, check_glory_kill), user, target_mob), 1 SECONDS, TIMER_DELETE_ME) // wait for the knife to do its job
+			// addtimer(CALLBACK(K, PROC_REF(check_glory_kill), user, target_mob), 1 SECONDS, TIMER_DELETE_ME) // wait for the knife to do its job
+			return
+		var/mob/living/carbon/human/target = target_mob
+		var/mob/living/carbon/human/killer = user
+		// the target is dead and we want its heart for the Belt of Hatred.
+		if(target.stat == DEAD && killer.zone_selected == BODY_ZONE_CHEST && target.get_bodypart(BODY_ZONE_CHEST))
+			var/datum/wound/loss/dismembering = new
+			dismembering.apply_dismember(target.get_bodypart(BODY_ZONE_CHEST), outright = TRUE)
+		// the target is almost dead and we want to glory kill it with a knife.
+		else if(target.stat != CONSCIOUS && killer.zone_selected == BODY_ZONE_PRECISE_MOUTH && !isdullahan(target) && target.get_bodypart(BODY_ZONE_HEAD))
+			target.visible_message(span_warning("[killer] brings [K] to [target]'s throat, ready to slit it open..."), \
+									span_userdanger("[killer] brings [K] to your throat, ready to slit it open..."))
+			// it's a signal handler so we don't sleep
+			INVOKE_ASYNC(src, PROC_REF(knife_glory_kill), target, K, killer, modifiers, attack_modifiers)
+			return COMPONENT_CANCEL_ATTACK_CHAIN
+
+/// target is in crit and about to be executed.
+/datum/antagonist/hatred/proc/knife_glory_kill(mob/living/carbon/human/target, obj/item/knife/knife, mob/living/carbon/human/killer, list/modifiers, list/attack_modifiers)
+	if(do_after(killer, 8 SECONDS, target))
+		target.visible_message(span_warning("[killer] slits [target]'s throat!"), span_userdanger("[killer] slits your throat!"))
+		SET_ATTACK_FORCE(attack_modifiers, 200)
+		knife.attack(target, killer, modifiers, attack_modifiers)
+	else
+		target.visible_message(span_notice("[killer] stopped his knife."), span_notice("[killer] stopped his knife!"))
+
 /datum/antagonist/hatred/on_removal()
 	var/mob/living/L = owner.current
 	UnregisterSignal(L, COMSIG_LIVING_LIFE)
 	UnregisterSignal(L, COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES)
+	UnregisterSignal(L, COMSIG_MOB_EQUIPPED_ITEM)
 	. = ..()
 	if(istype(L))
 		ADD_TRAIT(L, TRAIT_PREVENT_IMPLANT_AUTO_EXPLOSION, "hatred") // no boom on admin remove
@@ -236,7 +279,7 @@
 		return
 	addtimer(CALLBACK(src, PROC_REF(check_glory_kill), user, target), 1 SECONDS, TIMER_DELETE_ME) // wait for boolet to do its job
 
-/obj/item/gun/proc/check_glory_kill(mob/living/carbon/human/user, mob/living/carbon/human/target)
+/obj/item/proc/check_glory_kill(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(QDELETED(target) || target?.stat == DEAD)
 		user.fully_heal() // the only way of healing
 		// user.do_adrenaline(150, TRUE, 0, 0, TRUE, list(/datum/reagent/medicine/inaprovaline = 10, /datum/reagent/medicine/synaptizine = 15, /datum/reagent/medicine/regen_jelly = 20, /datum/reagent/medicine/stimulants = 20), "<span class='boldnotice'>You feel a sudden surge of energy!</span>")

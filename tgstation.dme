@@ -10470,6 +10470,7 @@
 #include "modular_zzz\code\modules\storytellers\event_defines\crewset\space_pirates.dm"
 #include "modular_zzz\code\modules\storytellers\event_defines\ghostset\space_dragon.dm"
 #include "modular_zzz\code\modules\storytellers\event_defines\ghostset\wizard.dm"
+#include "modular_zzz\code\modules\surgery\bodyparts\_bodyparts.dm"
 #include "modular_zzz\code\modules\uplink\uplink_items\badass.dm"
 #include "modular_zzz\code\modules\uplink\uplink_items\clownops.dm"
 #include "modular_zzz\code\modules\uplink\uplink_items\dangerous.dm"
