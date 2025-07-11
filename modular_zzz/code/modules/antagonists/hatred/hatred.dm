@@ -175,10 +175,10 @@
 
 /datum/antagonist/hatred/proc/appear_on_station()
 	var/list/possible_spawns = list()
-	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/gateway))
-	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/teleporter))
+	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/gateway)) // 1/7 is ~15%
+	possible_spawns += get_safe_random_station_turf(typesof(/area/station/command/teleporter)) // 1/7 is ~15%
 	// possible_spawns += get_safe_random_station_turf(typesof(/area/station/cargo)) // for debug at Runtime Station
-	for(var/i = 1; i <= 4; i++) // to increase chances for antag to spawn in maints.
+	for(var/i = 1; i <= 5; i++) // to increase chances for antag to spawn in maints.
 		possible_spawns += find_maintenance_spawn(atmos_sensitive = TRUE)
 	list_clear_nulls((possible_spawns))
 	var/turf/chosen_spawn = length(possible_spawns) ? pick(possible_spawns) : find_safe_turf(extended_safety_checks = TRUE, dense_atoms = FALSE) // in case of some huge map problems
