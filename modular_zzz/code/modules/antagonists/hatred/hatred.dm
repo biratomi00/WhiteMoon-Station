@@ -134,7 +134,7 @@
 	switch(security_alive)
 		// if(-INFINITY to 4)
 		// 	gear_level = 0
-		if(-INFINITY to 5) 	// 3(GC)-5
+		if(-INFINITY to 5) 	// 4(GC)-5
 			gear_level = 1
 		if(6 to INFINITY) 	// 6+
 			gear_level = 2
@@ -629,10 +629,10 @@
 	if(!.)
 		return
 	. = FALSE
-	if(SSsecurity_level.get_current_level_as_number() == SEC_LEVEL_GREEN) // разбавляем эксту внутривенно
-		if(length(SSjob.get_living_sec()) < 3)
+	if(SSsecurity_level.get_current_level_as_number() in list(SEC_LEVEL_GREEN, SEC_LEVEL_BLUE)) // разбавляем эксту внутривенно
+		if(length(SSjob.get_living_sec()) < 4)
 			return
-	else if(length(SSjob.get_living_sec()) < 4) // я желаю достойного сопротивления.
+	else if(length(SSjob.get_living_sec()) < 5) // я желаю достойного сопротивления.
 		return
 	return TRUE
 
@@ -687,10 +687,10 @@
 		return
 	if(EMERGENCY_PAST_POINT_OF_NO_RETURN)
 		return
-	if(SSsecurity_level.get_current_level_as_number() == SEC_LEVEL_GREEN) // разбавляем эксту внутривенно
-		if(length(SSjob.get_living_sec()) < 3)
+	if(SSsecurity_level.get_current_level_as_number() in list(SEC_LEVEL_GREEN, SEC_LEVEL_BLUE)) // разбавляем эксту внутривенно
+		if(length(SSjob.get_living_sec()) < 4)
 			return
-	else if(length(SSjob.get_living_sec()) < 4) // я желаю достойного сопротивления.
+	else if(length(SSjob.get_living_sec()) < 5) // я желаю достойного сопротивления.
 		return
 	return TRUE
 
