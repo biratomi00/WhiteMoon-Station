@@ -3,7 +3,4 @@
 	if(SSticker.current_state < GAME_STATE_PLAYING)
 		return
 
-	if(client?.holder)
-		. += "Storyteller: [SSgamemode.storyteller.name]"
-	else
-		. += "Storyteller: [SSgamemode.storyteller.name]"
+	. += "Storyteller: [SSgamemode.storyteller.name]"
