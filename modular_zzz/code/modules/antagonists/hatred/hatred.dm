@@ -111,6 +111,7 @@
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, "hatred")
 	ADD_TRAIT(H, TRAIT_DRINKS_BLOOD, "hatred") // why not
 	ADD_TRAIT(H, TRAIT_EVIL, "hatred")
+	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, "hatred")
 	H.add_movespeed_mod_immunities("hatred", /datum/movespeed_modifier/damage_slowdown)
 	// H.revive(ADMIN_HEAL_ALL)
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_CENTCOM)
@@ -325,12 +326,11 @@
 		. += span_danger("You cannot make your fingers drop this weapon of Doom.")
 
 /obj/item/gun/ballistic/shotgun/riot/hatred/click_ctrl_shift(mob/user)
-	// default rack_delay = 5
+	// default rack_delay is 5
 	rack()
-	stoplag(4)
 	while(chambered)
+		stoplag(3)
 		rack()
-		stoplag(4)
 
 /obj/item/gun/ballistic/shotgun/riot/hatred/equipped(mob/living/user, slot)
 	. = ..()
@@ -506,7 +506,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/knee
 	id = /obj/item/card/id/away/old
 	l_pocket = /obj/item/storage/pouch/ammo/hatred
-	r_pocket = /obj/item/flashlight/seclite
+	suit_store = /obj/item/flashlight/seclite
 	belt = /obj/item/storage/belt/military/assault
 	// back = /obj/item/storage/backpack/duffelbag/syndie/nri/captain
 	back = /obj/item/storage/backpack/satchel/fireproof
@@ -516,7 +516,7 @@
 		/obj/item/crowbar = 1
 		)
 	// r_hand = /obj/item/gun/ballistic/automatic/ar/ak12/hatred
-	// implants = list(/obj/item/implant/explosive, /obj/item/implant/anchor) // post_equip() doesn't work for implants since implanting occurs afrer post_equip()
+	implants = list(/obj/item/implant/explosive)
 
 /datum/outfit/hatred/pre_equip(mob/living/carbon/human/H, visualsOnly, client/preference_source)
 	var/datum/antagonist/hatred/Ha = H.mind?.has_antag_datum(/datum/antagonist/hatred)
@@ -544,13 +544,22 @@
 				belt = /obj/item/storage/belt/military/assault/hatred
 
 /datum/outfit/hatred/post_equip(mob/living/carbon/human/H, visualsOnly, client/preference_source)
-	var/obj/item/implant/explosive/E = new
-	E.implant(H)
-	var/obj/item/clothing/under/syndicate/tacticool/black/I = H.get_item_by_slot(ITEM_SLOT_ICLOTHING)
-	I.has_sensor = NO_SENSORS
-	I.resistance_flags = FIRE_PROOF | ACID_PROOF
-	I.unique_reskin = null
-	ADD_TRAIT(I, TRAIT_NODROP, "hatred")
+	// var/obj/item/implant/explosive/E = new
+	// E.implant(H)
+	var/obj/item/clothing/under/U = H.get_item_by_slot(ITEM_SLOT_ICLOTHING)
+	U.has_sensor = NO_SENSORS
+	U.resistance_flags = FIRE_PROOF | ACID_PROOF
+	U.unique_reskin = null
+	ADD_TRAIT(U, TRAIT_NODROP, "hatred")
+
+	var/obj/item/clothing/I = H.get_item_by_slot(ITEM_SLOT_FEET)
+	I.resistance_flags = FIRE_PROOF
+
+	I = H.get_item_by_slot(ITEM_SLOT_EYES)
+	I.resistance_flags = FIRE_PROOF
+
+	I = H.get_item_by_slot(ITEM_SLOT_GLOVES)
+	I.resistance_flags = FIRE_PROOF
 
 	var/obj/item/card/id/advanced/A = H.get_item_by_slot(ITEM_SLOT_ID)
 	A.name = "Mangled ID Card"
@@ -614,8 +623,6 @@
 	max_antag_cap = 1
 	repeatable = FALSE // one man is enough to shake this station.
 	signup_atom_appearance = /obj/item/gun/ballistic/automatic/ar/ak12
-	var/saved_mind = null
-	var/mob/living/carbon/human/hatred_body = null
 
 /datum/dynamic_ruleset/midround/from_ghosts/hatred/can_be_selected()
 	. = ..()
