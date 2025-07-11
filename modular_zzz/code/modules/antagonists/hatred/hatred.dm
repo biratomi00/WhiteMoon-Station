@@ -99,7 +99,6 @@
 	H.equipOutfit(/datum/outfit/hatred)
 	H.SetImmobilized(0, TRUE)
 	// H.SetParalyzed(0, TRUE)
-	appear_on_station()
 	. = ..()
 	// TRAIT_NICE_SHOT TRAIT_DOUBLE_TAP TRAIT_ANALGESIA
 	ADD_TRAIT(H, TRAIT_SLEEPIMMUNE, "hatred") // I challenge you to a glorious fight!
@@ -114,6 +113,7 @@
 	// ADD_TRAIT(H, TRAIT_NOSOFTCRIT, "hatred")
 	H.add_movespeed_mod_immunities("hatred", /datum/movespeed_modifier/damage_slowdown)
 	// H.revive(ADMIN_HEAL_ALL)
+	appear_on_station()
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_CENTCOM)
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_RESERVED)
 	allowed_z_levels += SSmapping.levels_by_trait(ZTRAIT_STATION)
@@ -225,8 +225,6 @@
 	SIGNAL_HANDLER
 	if(ishuman(target_mob) && ishuman(user) && target_mob != user)
 		if(length(attack_modifiers) && attack_modifiers[FORCE_OVERRIDE] == 200) // no need to check. the lethal strike is about to blown.
-			addtimer(CALLBACK(K, TYPE_PROC_REF(/obj/item/knife, check_glory_kill), user, target_mob), 1 SECONDS, TIMER_DELETE_ME) // wait for the knife to do its job
-			// addtimer(CALLBACK(K, PROC_REF(check_glory_kill), user, target_mob), 1 SECONDS, TIMER_DELETE_ME) // wait for the knife to do its job
 			return
 		var/mob/living/carbon/human/target = target_mob
 		var/mob/living/carbon/human/killer = user
@@ -235,7 +233,7 @@
 			var/datum/wound/loss/dismembering = new
 			dismembering.apply_dismember(target.get_bodypart(BODY_ZONE_CHEST), outright = TRUE)
 		// the target is almost dead and we want to glory kill it with a knife.
-		else if(target.stat != CONSCIOUS && killer.zone_selected == BODY_ZONE_PRECISE_MOUTH && !isdullahan(target) && target.get_bodypart(BODY_ZONE_HEAD))
+		else if(!(target.stat in list(CONSCIOUS, DEAD)) && killer.zone_selected == BODY_ZONE_PRECISE_MOUTH && !isdullahan(target) && target.get_bodypart(BODY_ZONE_HEAD))
 			target.visible_message(span_warning("[killer] brings [K] to [target]'s throat, ready to slit it open..."), \
 									span_userdanger("[killer] brings [K] to your throat, ready to slit it open..."))
 			// it's a signal handler so we don't sleep
@@ -244,9 +242,15 @@
 
 /// target is in crit and about to be executed.
 /datum/antagonist/hatred/proc/knife_glory_kill(mob/living/carbon/human/target, obj/item/knife/knife, mob/living/carbon/human/killer, list/modifiers, list/attack_modifiers)
-	if(do_after(killer, 8 SECONDS, target))
+	var/is_glory = TRUE
+	if(target?.stat == DEAD || !target.client) // already dead bodies or npcs don't count
+		is_glory = FALSE
+	if(do_after(killer, 6 SECONDS, target))
 		target.visible_message(span_warning("[killer] slits [target]'s throat!"), span_userdanger("[killer] slits your throat!"))
 		SET_ATTACK_FORCE(attack_modifiers, 200)
+		if(is_glory)
+			// wait for the knife to do its job.
+			addtimer(CALLBACK(knife, TYPE_PROC_REF(/obj/item/knife, check_glory_kill), killer, target), 1 SECONDS, TIMER_DELETE_ME)
 		knife.attack(target, killer, modifiers, attack_modifiers)
 	else
 		target.visible_message(span_notice("[killer] stopped his knife."), span_notice("[killer] stopped his knife!"))
@@ -280,7 +284,7 @@
 	addtimer(CALLBACK(src, PROC_REF(check_glory_kill), user, target), 1 SECONDS, TIMER_DELETE_ME) // wait for boolet to do its job
 
 /obj/item/proc/check_glory_kill(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	if(QDELETED(target) || target?.stat == DEAD)
+	if((QDELETED(target) || target?.stat == DEAD) && !QDELETED(user) && (user?.stat in list(CONSCIOUS, SOFT_CRIT)))
 		user.fully_heal() // the only way of healing
 		// user.do_adrenaline(150, TRUE, 0, 0, TRUE, list(/datum/reagent/medicine/inaprovaline = 10, /datum/reagent/medicine/synaptizine = 15, /datum/reagent/medicine/regen_jelly = 20, /datum/reagent/medicine/stimulants = 20), "<span class='boldnotice'>You feel a sudden surge of energy!</span>")
 		user.visible_message("As blood splashes onto [src], it starts glowing menacingly and its wielder seemingly regaining their strength and vitality.")
