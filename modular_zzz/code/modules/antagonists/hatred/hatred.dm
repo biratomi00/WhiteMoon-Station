@@ -287,7 +287,7 @@
 	if((QDELETED(target) || target?.stat == DEAD) && !QDELETED(user) && (user?.stat in list(CONSCIOUS, SOFT_CRIT)))
 		user.fully_heal() // the only way of healing
 		// user.do_adrenaline(150, TRUE, 0, 0, TRUE, list(/datum/reagent/medicine/inaprovaline = 10, /datum/reagent/medicine/synaptizine = 15, /datum/reagent/medicine/regen_jelly = 20, /datum/reagent/medicine/stimulants = 20), "<span class='boldnotice'>You feel a sudden surge of energy!</span>")
-		user.visible_message("As blood splashes onto [src], it starts glowing menacingly and its wielder seemingly regaining their strength and vitality.")
+		user.visible_message("As victim's blood splashes onto [src], it starts glowing menacingly and its wielder seemingly regaining his strength and vitality.")
 		to_chat(user, span_notice("The blood of the weak gives you an inhuman relief and strength to continue the massacre."))
 		var/obj/item/storage/belt/military/assault/hatred/B = user.get_item_by_slot(ITEM_SLOT_BELT)
 		if(istype(B))
@@ -356,6 +356,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/extended // has lethal ammo from the start
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	box_reload_penalty = FALSE
+	rack_delay = 3
 	var/mob/living/carbon/human/original_wielder = null
 
 /obj/item/gun/ballistic/shotgun/riot/hatred/Destroy()
@@ -373,7 +374,6 @@
 		. += span_danger("You cannot make your fingers drop this weapon of Doom.")
 
 /obj/item/gun/ballistic/shotgun/riot/hatred/click_ctrl_shift(mob/user)
-	// default rack_delay is 5
 	rack()
 	while(chambered)
 		stoplag(3)
@@ -553,12 +553,13 @@
 	shoes = /obj/item/clothing/shoes/jackboots/knee
 	id = /obj/item/card/id/away/old
 	l_pocket = /obj/item/storage/pouch/ammo/hatred
-	suit_store = /obj/item/flashlight/seclite
+	// suit_store = /obj/item/flashlight/seclite // the light doesn't work after spawn for some reason
 	belt = /obj/item/storage/belt/military/assault
 	// back = /obj/item/storage/backpack/duffelbag/syndie/nri/captain
 	back = /obj/item/storage/backpack/satchel/fireproof
 	backpack_contents = list(/obj/item/storage/box/survival/engineer = 1,
 		/obj/item/knife/combat = 1,
+		/obj/item/flashlight/seclite = 1,
 		/obj/item/sensor_device = 1,
 		/obj/item/crowbar = 1
 		)
