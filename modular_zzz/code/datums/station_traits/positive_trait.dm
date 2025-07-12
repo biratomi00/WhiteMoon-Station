@@ -38,7 +38,7 @@
 			SSid_access.apply_trim_to_card(id_card, /datum/id_trim/job/assistant)
 			id_card.registered_account.adjust_money(5000, "Expedition Corps Bonus")
 
-	addtimer(CALLBACK(src, PROC_REF(send_expedition_announcement)), 10 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(send_expedition_announcement)), 5 MINUTES)
 
 /datum/station_trait/assistants_as_expeditioners/proc/send_expedition_announcement()
 	priority_announce(

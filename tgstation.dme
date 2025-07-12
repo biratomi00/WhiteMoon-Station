@@ -10363,7 +10363,7 @@
 #include "modular_zzz\code\datums\quirks\positive_qurks\jumper.dm"
 #include "modular_zzz\code\datums\quirks\positive_qurks\undead.dm"
 #include "modular_zzz\code\datums\ruins\space.dm"
-#include "modular_zzz\code\datums\station_traits\traits.dm"
+#include "modular_zzz\code\datums\station_traits\positive_trait.dm"
 #include "modular_zzz\code\game\hos_color_changer.dm"
 #include "modular_zzz\code\game\gamemodes\objectives.dm"
 #include "modular_zzz\code\game\items\sec_hailer.dm"
