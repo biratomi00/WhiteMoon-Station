@@ -1,3 +1,15 @@
+/datum/antagonist/ert/commander/green
+	outfit = /datum/outfit/ert/commander/green
+
+/datum/antagonist/ert/security/green
+	outfit = /datum/outfit/ert/security/green
+
+/datum/antagonist/ert/medic/green
+	outfit = /datum/outfit/ert/medic/green
+
+/datum/antagonist/ert/engineer/green
+	outfit = /datum/outfit/ert/engineer/green
+
 /datum/ert/blue
 	leader_role = /datum/antagonist/ert/commander/blue
 	roles = list(/datum/antagonist/ert/security/blue, /datum/antagonist/ert/medic/blue, /datum/antagonist/ert/engineer/blue)
