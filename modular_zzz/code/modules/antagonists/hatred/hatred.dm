@@ -58,12 +58,27 @@
 	 * 2 = ROBUST gear: +armor or +cursed belt |||| +fast executions + +1 life on low gear
 	 */
 	var/gear_level = 1
-	var/static/list/low_guns = list("Pistol", "Double-barreled shotgun") // NOT IMPLEMENTED YET!
-	var/static/list/classic_guns = list("AK12","Riot Shotgun")
+	var/list/low_guns = list("Pistol", "Double-barreled shotgun") // NOT IMPLEMENTED YET!
+	var/list/classic_guns = list("AK12","Riot Shotgun")
 	// there won't be special level 2 guns, because I don't want antag to have cheat guns. Level 2 gear is always better stats/traits for level 1 gear.
-	var/static/list/high_gear = list("Belt of Hatred", "More armor")
+	var/list/high_gear = list("Belt of Hatred", "More armor")
 	var/chosen_gun = null
 	var/chosen_high_gear = null
+	var/list/killing_speech = list(	'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_1.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_2.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_3.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_4.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_5.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_6.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_7.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_8.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_9.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_10.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_11.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_12.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_13.ogg',
+									'modular_zzz/code/modules/antagonists/hatred/killing_speech/hatred_speech_14.ogg'
+									)
 
 /datum/antagonist/hatred/greet()
 	/*
@@ -249,6 +264,8 @@
 	var/is_glory = TRUE
 	if(target?.stat == DEAD || !target.client) // already dead bodies or npcs don't count
 		is_glory = FALSE
+	else
+		playsound(owner.current, pick(killing_speech), vol = 50, vary = FALSE, ignore_walls = FALSE)
 	if(do_after(killer, 6 SECONDS, target))
 		target.visible_message(span_warning("[killer] slits [target]'s throat!"), span_userdanger("[killer] slits your throat!"))
 		SET_ATTACK_FORCE(attack_modifiers, 200)
@@ -277,11 +294,14 @@
 	completed = TRUE // i have no idea how to count your personal kills.
 
 /obj/item/gun/handle_suicide(mob/living/carbon/human/user, mob/living/carbon/human/target, params, bypass_timer, time_to_kill = 12 SECONDS)
-	if(!user.mind.has_antag_datum(/datum/antagonist/hatred))
+	var/datum/antagonist/hatred/Ha = user.mind.has_antag_datum(/datum/antagonist/hatred)
+	if(!Ha)
 		return ..()
 	var/is_glory = TRUE
 	if(target?.stat == DEAD || !target.client) // already dead bodies or npcs don't count
 		is_glory = FALSE
+	else
+		playsound(user, pick(Ha.killing_speech), vol = 50, vary = FALSE, ignore_walls = FALSE)
 	. = ..(user, target, params, bypass_timer, time_to_kill = 8 SECONDS)
 	if(!. || user == target || !is_glory)
 		return
@@ -360,8 +380,8 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/extended // has lethal ammo from the start
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	box_reload_penalty = FALSE
-	fire_delay = 3
-	rack_delay = 3
+	fire_delay = 4
+	rack_delay = 4
 	var/mob/living/carbon/human/original_wielder = null
 
 /obj/item/gun/ballistic/shotgun/riot/hatred/Destroy()
