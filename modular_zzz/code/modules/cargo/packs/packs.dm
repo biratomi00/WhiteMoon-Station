@@ -1,4 +1,4 @@
-/datum/supply_pack/misc/vanguard_surpluss
+/datum/supply_pack/misc/vanguard_surplus
 	cost = CARGO_CRATE_VALUE * 5
 	access_view = ACCESS_GATEWAY
 	access = ACCESS_GATEWAY
