@@ -736,10 +736,10 @@
 	tags = list(TAG_COMBAT, TAG_MEDIUM) // more strict additional checks will be done during can_spawn_event().
 	// этот антаг имеет жесткие требования живых игроков и живых офицеров в раунде, а еще бета тест. поэтому х2 к шансу попытки запустить антага.
 	// когда все устаканится, то можно опустить до 15, но крайне желательно не ставить меньше 10, так как этот антаг имеет высокие требования к количеству живых офицеров и в нагруженные динамики это требование будет невыполено.
-	weight = 20
+	weight = 15
 	max_occurrences = 1
 	min_players = 20 // для малфа нужно 20. и для демона резни. пусть будет так. меньше не надо - некого убивать.
-	earliest_start = 40 MINUTES
+	earliest_start = 50 MINUTES // какого то хуя походу считает от запуска мира, а не от старта раунда
 	category = EVENT_CATEGORY_ENTITIES // bloodshed. genocide. quite simple desires.
 	description = "The Man without a name is about to commit ruthless genocide of crewmembers."
 
