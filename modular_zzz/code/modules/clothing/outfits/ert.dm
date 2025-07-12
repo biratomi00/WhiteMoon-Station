@@ -1,14 +1,14 @@
-/datum/antagonist/ert/commander/green
-	outfit = /datum/outfit/ert/commander/green
+/datum/antagonist/ert/commander/blue
+	outfit = /datum/outfit/centcom/ert/commander/blue
 
-/datum/antagonist/ert/security/green
-	outfit = /datum/outfit/ert/security/green
+/datum/antagonist/ert/security/blue
+	outfit = /datum/outfit/centcom/ert/security/blue
 
-/datum/antagonist/ert/medic/green
-	outfit = /datum/outfit/ert/medic/green
+/datum/antagonist/ert/medic/blue
+	outfit = /datum/outfit/centcom/ert/medic/blue
 
-/datum/antagonist/ert/engineer/green
-	outfit = /datum/outfit/ert/engineer/green
+/datum/antagonist/ert/engineer/blue
+	outfit = /datum/outfit/centcom/ert/engineer/blue
 
 /datum/ert/blue
 	leader_role = /datum/antagonist/ert/commander/blue
@@ -38,6 +38,8 @@
 
 /datum/outfit/centcom/ert/commander/blue
 	l_hand = null
+	head = /obj/item/clothing/head/helmet/swat/command
+	suit = /obj/item/clothing/suit/armor/swat/command
 	back = /obj/item/storage/backpack/ert_commander
 	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
 	backpack_contents = list(
@@ -95,6 +97,8 @@
 
 /datum/outfit/centcom/ert/security/blue
 	l_hand = null
+	head = /obj/item/clothing/head/helmet/swat/security
+	suit = /obj/item/clothing/suit/armor/swat/security
 	back = /obj/item/storage/backpack/ert_commander/ert_security
 	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
 	backpack_contents = list(
@@ -150,6 +154,8 @@
 
 /datum/outfit/centcom/ert/medic/blue
 	r_hand = null
+	head = /obj/item/clothing/head/helmet/swat/medical
+	suit = /obj/item/clothing/suit/armor/swat/medical
 	back = /obj/item/storage/backpack/ert_commander/ert_medical
 	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
 	backpack_contents = list(
@@ -208,6 +214,8 @@
 
 /datum/outfit/centcom/ert/engineer/blue
 	l_hand = null
+	head = /obj/item/clothing/head/helmet/swat/engineer
+	suit = /obj/item/clothing/suit/armor/swat/engineer
 	back = /obj/item/storage/backpack/ert_commander/ert_engineering
 	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
 	backpack_contents = list(

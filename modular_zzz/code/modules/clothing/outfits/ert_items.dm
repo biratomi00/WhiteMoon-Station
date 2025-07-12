@@ -1,5 +1,5 @@
 /obj/item/storage/box/centcom
-	name = "box"
+	name = "Centcom Box"
 	desc = "It's just an ordinary box."
 	icon_state = "internals_large"
 
@@ -19,7 +19,7 @@
 	desc = "A handheld tracking device that locks onto certain signals. Ignores suit sensors, but is much less accurate."
 	icon = 'modular_zzz/icons/obj/device.dmi'
 	icon_state = "pinpointer_centcom"
-	item_state = "pinpointer_black"
+	worn_icon_state = "pinpointer_black"
 	minimum_range = 5
 	ignore_suit_sensor_level = TRUE
 
