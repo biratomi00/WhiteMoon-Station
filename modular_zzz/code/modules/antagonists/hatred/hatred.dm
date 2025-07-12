@@ -334,7 +334,8 @@
 	actions_types = list()
 	burst_size = 1
 	burst_delay = 2
-	projectile_damage_multiplier = 0.8
+	weapon_weight = WEAPON_HEAVY
+	projectile_damage_multiplier = 0.9
 	var/mob/living/carbon/human/original_wielder = null
 
 /obj/item/gun/ballistic/automatic/ar/ak12/hatred/Initialize(mapload)
@@ -690,7 +691,7 @@
 	weight = list(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 0,
-		DYNAMIC_TIER_MEDIUMHIGH = 9,
+		DYNAMIC_TIER_MEDIUMHIGH = 0,
 		DYNAMIC_TIER_HIGH = 9, // будет 7 или 8, так как этот антаг имеет высокие требования к количеству живых офицеров и в нагруженные динамики это требование будет невыполено. на время бета теста выставлено 9.
 	)
 	min_pop = 30
@@ -734,7 +735,7 @@
 	name = "Spawn Mass Shooter"
 	typepath = /datum/round_event/ghost_role/hatred
 	track = EVENT_TRACK_GHOSTSET
-	tags = list(TAG_COMBAT, TAG_MEDIUM) // more strict additional checks will be done during can_spawn_event().
+	tags = list(TAG_COMBAT, TAG_HIGH) // more strict additional checks will be done during can_spawn_event().
 	// этот антаг имеет жесткие требования живых игроков и живых офицеров в раунде, а еще бета тест. поэтому х2 к шансу попытки запустить антага.
 	// когда все устаканится, то можно опустить до 15, но крайне желательно не ставить меньше 10, так как этот антаг имеет высокие требования к количеству живых офицеров и в нагруженные динамики это требование будет невыполено.
 	weight = 15
@@ -755,7 +756,7 @@
 	if(!.)
 		return
 	. = FALSE
-	if(!(SSgamemode.storyteller.storyteller_type in list(STORYTELLER_TYPE_INTENSE, STORYTELLER_TYPE_ALWAYS_AVAILABLE))) // only for medium/high dynamics
+	if(!(SSgamemode.storyteller.storyteller_type in list(STORYTELLER_TYPE_INTENSE))) // only for high dynamics
 		return
 	if(!SSdynamic.antag_events_enabled)
 		return
