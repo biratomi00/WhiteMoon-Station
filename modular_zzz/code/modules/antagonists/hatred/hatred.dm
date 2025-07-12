@@ -760,7 +760,7 @@
 		return
 	if(EMERGENCY_PAST_POINT_OF_NO_RETURN)
 		return
-	if(SSsecurity_level.get_current_level_as_number() in list(SEC_LEVEL_GREEN, SEC_LEVEL_BLUE)) // разбавляем эксту внутривенно
+	if(SSsecurity_level.get_current_level_as_number() in list(SEC_LEVEL_GREEN)) // разбавляем эксту внутривенно
 		if(length(SSjob.get_living_sec()) < 4)
 			return
 	else if(length(SSjob.get_living_sec()) < 5) // я желаю достойного сопротивления.
