@@ -356,6 +356,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/extended // has lethal ammo from the start
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	box_reload_penalty = FALSE
+	fire_delay = 3
 	rack_delay = 3
 	var/mob/living/carbon/human/original_wielder = null
 
