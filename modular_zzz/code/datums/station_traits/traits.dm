@@ -15,19 +15,22 @@
 			ACCESS_GATEWAY,
 			ACCESS_EVA,
 			ACCESS_MAINT_TUNNELS,
-			ACCESS_EXTERNAL_AIRLOCKS
+			ACCESS_EXTERNAL_AIRLOCKS,
+			ACCESS_WEAPONS
 		)
 		assistant_trim.minimal_access |= list(
 			ACCESS_GATEWAY,
 			ACCESS_EVA,
 			ACCESS_MAINT_TUNNELS,
-			ACCESS_EXTERNAL_AIRLOCKS
+			ACCESS_EXTERNAL_AIRLOCKS,
+			ACCESS_WEAPONS
 		)
 		assistant_trim.extra_access |= list(
 			ACCESS_GATEWAY,
 			ACCESS_EVA,
 			ACCESS_MAINT_TUNNELS,
-			ACCESS_EXTERNAL_AIRLOCKS
+			ACCESS_EXTERNAL_AIRLOCKS,
+			ACCESS_WEAPONS
 		)
 
 	// Update all existing assistant ID cards with the new trim
@@ -38,14 +41,6 @@
 	addtimer(CALLBACK(src, PROC_REF(send_expedition_announcement)), 10 MINUTES)
 
 /datum/station_trait/assistants_as_expeditioners/proc/send_expedition_announcement()
-	print_command_report(
-		"ВНИМАНИЕ! Все ассистенты станции [station_name()] официально записаны в Экспедиционный Корпус Nanotrasen. \
-		Вам выданы расширенные доступы к EVA и к Гейту. \
-		Ваша новая миссия: поиск и исследование артефактов в космическом пространстве и через Гейт. \
-		Используйте предоставленное оборудование ответственно и соблюдайте протоколы безопасности. \
-		Удачи в ваших экспедициях!",
-		"Экспедиционный Корпус Nanotrasen"
-	)
 	priority_announce(
 		"ВНИМАНИЕ! Все ассистенты станции [station_name()] официально записаны в Экспедиционный Корпус Nanotrasen. \
 		Вам выданы расширенные доступы к EVA и к Гейту. \
