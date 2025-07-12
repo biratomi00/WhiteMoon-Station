@@ -33,17 +33,17 @@
 			ACCESS_WEAPONS
 		)
 
-	// Update all existing assistant ID cards with the new trim
 	for(var/obj/item/card/id/advanced/id_card in world)
 		if(istype(id_card.trim, /datum/id_trim/job/assistant))
 			SSid_access.apply_trim_to_card(id_card, /datum/id_trim/job/assistant)
+			id_card.registered_account.adjust_money(5000, "Expedition Corps Bonus")
 
 	addtimer(CALLBACK(src, PROC_REF(send_expedition_announcement)), 10 MINUTES)
 
 /datum/station_trait/assistants_as_expeditioners/proc/send_expedition_announcement()
 	priority_announce(
 		"ВНИМАНИЕ! Все ассистенты станции [station_name()] официально записаны в Экспедиционный Корпус Nanotrasen. \
-		Вам выданы расширенные доступы к EVA и к Гейту. \
+		Вам выданы расширенные доступы к EVA и к Гейту, а также бонус в размере 5000 кредитов на ваши банковские счета. \
 		Ваша новая миссия: поиск и исследование артефактов в космическом пространстве и через Гейт. \
 		Используйте предоставленное оборудование ответственно и соблюдайте протоколы безопасности. \
 		Удачи в ваших экспедициях!",
