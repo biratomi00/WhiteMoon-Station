@@ -14,7 +14,7 @@
 		TAG_MEDIUM = 1,
 		TAG_HIGH = 0.5
 		)
-	antag_divisor = 8
+	antag_divisor = 16
 
 /datum/storyteller_data/tracks/med_chaos
 	threshold_mundane = 900
