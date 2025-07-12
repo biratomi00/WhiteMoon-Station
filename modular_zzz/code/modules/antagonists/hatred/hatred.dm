@@ -334,6 +334,7 @@
 	actions_types = list()
 	burst_size = 1
 	burst_delay = 2
+	projectile_damage_multiplier = 0.8
 	var/mob/living/carbon/human/original_wielder = null
 
 /obj/item/gun/ballistic/automatic/ar/ak12/hatred/Initialize(mapload)
