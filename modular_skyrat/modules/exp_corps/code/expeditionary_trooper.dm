@@ -13,6 +13,7 @@
 /obj/structure/closet/crate/secure/exp_corps
 	name = "Expedition Crate"
 	icon_state = "expcrate"
+	base_icon_state = "expcrate"
 	icon = 'modular_skyrat/modules/exp_corps/icons/exp_crate.dmi'
 	req_access = list(ACCESS_GATEWAY)
 	var/loadout_desc = "Whoever picks this is an incredibly boring generalist."
@@ -52,6 +53,8 @@
 	new /obj/item/clothing/suit/armor/vest/expeditionary_corps(src)
 	new /obj/item/storage/belt/military/expeditionary_corps(src)
 	new /obj/item/storage/backpack/duffelbag/expeditionary_corps(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
 
 //shield guy
 /obj/structure/closet/crate/secure/exp_corps/pointman/PopulateContents()
@@ -65,6 +68,8 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/pointman(src)
 	new /obj/item/storage/backpack/duffelbag/expeditionary_corps(src)
 	new /obj/item/shield/riot/pointman(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
 
 //medic
 /obj/structure/closet/crate/secure/exp_corps/field_medic/PopulateContents()
@@ -77,6 +82,8 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/field_medic(src)
 	new /obj/item/storage/backpack/duffelbag/expeditionary_corps(src)
 	new /obj/item/healthanalyzer(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
 
 //engineer gaming
 /obj/structure/closet/crate/secure/exp_corps/combat_tech/PopulateContents()
@@ -91,6 +98,8 @@
 	new /obj/item/storage/backpack/duffelbag/expeditionary_corps(src)
 	new /obj/item/skillchip/job/engineer(src)
 	new /obj/item/storage/pouch/material(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
 
 /obj/item/storage/box/expeditionary_survival/PopulateContents()
 	new /obj/item/storage/box/donkpockets(src)
@@ -100,6 +109,8 @@
 	new /obj/item/reagent_containers/blood/universal(src)
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/storage/pill_bottle/multiver(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
 
 //edgy loner with knives AND A FUKKEN gun
 /obj/structure/closet/crate/secure/exp_corps/marksman/PopulateContents()
@@ -113,3 +124,5 @@
 	new /obj/item/storage/belt/military/expeditionary_corps/marksman(src)
 	new /obj/item/storage/backpack/duffelbag/expeditionary_corps(src)
 	new /obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/skild(src)
+	new /obj/item/clothing/under/rank/expeditionary_corps(src)
+	new /obj/item/clothing/shoes/combat/expeditionary_corps(src)
