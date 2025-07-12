@@ -1,3 +1,7 @@
+/datum/ert/blue
+	leader_role = /datum/antagonist/ert/commander/blue
+	roles = list(/datum/antagonist/ert/security/blue, /datum/antagonist/ert/medic/blue, /datum/antagonist/ert/engineer/blue)
+
 /obj/item/mod/control/pre_equipped/responsory
 	applied_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
@@ -19,6 +23,21 @@
 	implants = list(/obj/item/implant/deathrattle)
 
 /// ERT_COMM START ///
+
+/datum/outfit/centcom/ert/commander/blue
+	l_hand = null
+	back = /obj/item/storage/backpack/ert_commander
+	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	backpack_contents = list(
+		/obj/item/storage/medkit/advanced = 1,
+		/obj/item/melee/baton/security/loaded = 1,
+	)
+	belt = /obj/item/storage/belt/military/ert_min
+	ears = /obj/item/radio/headset/headset_cent/alt/leader
+	l_pocket = /obj/item/extinguisher/mini
+	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
+	glasses = /obj/item/clothing/glasses/night
+	box = /obj/item/storage/box/centcom
 
 /datum/outfit/centcom/ert/commander
 	l_hand = null
@@ -62,9 +81,23 @@
 
 /// ERT_SECU START ///
 
+/datum/outfit/centcom/ert/security/blue
+	l_hand = null
+	back = /obj/item/storage/backpack/ert_commander/ert_security
+	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	backpack_contents = list(
+		/obj/item/storage/medkit/advanced = 1,
+		/obj/item/melee/baton/security/loaded = 1,
+	)
+	belt = /obj/item/storage/belt/military/ert_min
+	l_pocket = /obj/item/extinguisher/mini
+	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
+	glasses = /obj/item/clothing/glasses/night
+	box = /obj/item/storage/box/centcom
+
 /datum/outfit/centcom/ert/security
 	l_hand = null
-	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	suit_store = /obj/item/gun/energy/modular_laser_rifle
 	backpack_contents = list(
 		/obj/item/storage/medkit/advanced = 1,
 		/obj/item/melee/baton/security/loaded = 1,
@@ -103,9 +136,25 @@
 
 /// ERT_MEDI START ///
 
-/datum/outfit/centcom/ert/medic
-	l_hand = null
+/datum/outfit/centcom/ert/medic/blue
+	r_hand = null
+	back = /obj/item/storage/backpack/ert_commander/ert_medical
 	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	backpack_contents = list(
+		/obj/item/storage/medkit/advanced = 1,
+		/obj/item/reagent_containers/hypospray/combat = 1,
+		/obj/item/gun/medbeam = 1,
+		/obj/item/melee/baton/security/loaded = 1,
+	)
+	belt = /obj/item/storage/belt/military/ert_min
+	l_pocket = /obj/item/extinguisher/mini
+	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
+	glasses = /obj/item/clothing/glasses/hud/health/night
+	box = /obj/item/storage/box/centcom
+
+/datum/outfit/centcom/ert/medic
+	r_hand = null
+	suit_store = /obj/item/gun/energy/modular_laser_rifle
 	backpack_contents = list(
 		/obj/item/storage/medkit/advanced = 1,
 		/obj/item/reagent_containers/hypospray/combat = 1,
@@ -119,7 +168,7 @@
 	box = /obj/item/storage/box/centcom
 
 /datum/outfit/centcom/ert/medic/alert
-	l_hand = null
+	r_hand = null
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	suit_store = /obj/item/gun/ballistic/automatic/ar
 	backpack_contents = list(
@@ -145,9 +194,26 @@
 
 /// ERT_ENGI START ///
 
+/datum/outfit/centcom/ert/engineer/blue
+	l_hand = null
+	back = /obj/item/storage/backpack/ert_commander/ert_engineering
+	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	backpack_contents = list(
+		/obj/item/storage/medkit/advanced = 1,
+		/obj/item/construction/rcd/loaded/upgraded = 1,
+		/obj/item/rcd_ammo/large = 2,
+		/obj/item/pipe_dispenser = 1,
+		/obj/item/melee/baton/security/loaded = 1,
+	)
+	belt = /obj/item/storage/belt/utility/full/powertools
+	l_pocket = /obj/item/extinguisher/mini
+	r_pocket = /obj/item/tank/internals/emergency_oxygen/double
+	glasses = /obj/item/clothing/glasses/meson/night
+	box = /obj/item/storage/box/centcom
+
 /datum/outfit/centcom/ert/engineer
 	l_hand = null
-	suit_store = /obj/item/gun/energy/modular_laser_rifle/carbine
+	suit_store = /obj/item/gun/energy/modular_laser_rifle
 	backpack_contents = list(
 		/obj/item/storage/medkit/advanced = 1,
 		/obj/item/construction/rcd/loaded/upgraded = 1,
