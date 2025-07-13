@@ -16,8 +16,8 @@
 	antag_divisor = 8
 
 /datum/storyteller_data/tracks/high_chaos
-	threshold_mundane = 900
-	threshold_moderate = 1200
-	threshold_major = 2400
-	threshold_crewset = 1200
-	threshold_ghostset = 1600
+	threshold_mundane = 1000
+	threshold_moderate = 1500
+	threshold_major = 2500
+	threshold_crewset = 2000
+	threshold_ghostset = 2000
