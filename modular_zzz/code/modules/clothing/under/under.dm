@@ -26,8 +26,8 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/MI13_uniform
-	name = "MI13 combat uniform"
-	desc = "Black turtleneck with camouflaged combat pants, maded for MI13 agents in the field."
+	name = "Special combat uniform"
+	desc = "Black turtleneck with camouflaged combat pants, maded for special agents in the field"
 	icon = 'modular_zzz/icons/obj/clothing/under.dmi'
 	worn_icon = 'modular_zzz/icons/mob/clothing/under.dmi'
 	worn_icon_digi = 'modular_zzz/icons/mob/clothing/under.dmi'
