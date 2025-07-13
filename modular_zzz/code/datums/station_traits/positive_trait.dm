@@ -2,8 +2,9 @@
 	. = ..()
 
 	if(HAS_TRAIT(SSstation, "station_trait_assistants_as_expeditioners") && istype(equipping, /datum/job/assistant))
-		if(bank_account.account_balance < 5000)
-			bank_account.adjust_money(5000 - bank_account.account_balance, "Expedition Corps Bonus")
+		var/obj/item/card/id/id_card = get_idcard()
+		if(id_card?.registered_account && id_card.registered_account.account_balance < 5000)
+			id_card.registered_account.adjust_money(5000 - id_card.registered_account.account_balance, "Expedition Corps Bonus")
 
 /datum/station_trait/assistants_as_expeditioners
 	name = "All assistants expeditioners now"
