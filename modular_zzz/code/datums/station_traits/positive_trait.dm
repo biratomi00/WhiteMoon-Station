@@ -1,6 +1,6 @@
 /datum/station_trait/assistants_as_expeditioners
 	name = "All assistants expeditioners now"
-	report_message = "Мы решили записать абсолютно всех ассистентов в Экспедиционные Войска. Теперь у них есть доступ к ЕВА и к Гейту."
+	report_message = "Мы решили записать абсолютно всех ассистентов с вашей станции в Экспедиционный Корпус. Теперь у них есть доступ к ЕВА, к Гейту и пять тысяч кредитов сверху."
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 5
 	cost = STATION_TRAIT_COST_LOW
