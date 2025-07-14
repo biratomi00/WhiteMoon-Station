@@ -24,3 +24,12 @@
 	worn_icon_digi = 'modular_zzz/icons/mob/clothing/under_digi.dmi'
 	icon_state = "ecu_2"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/MI13_uniform
+	name = "Special combat uniform"
+	desc = "Black turtleneck with camouflaged combat pants, maded for special agents in the field"
+	icon = 'modular_zzz/icons/obj/clothing/under.dmi'
+	worn_icon = 'modular_zzz/icons/mob/clothing/under.dmi'
+	worn_icon_digi = 'modular_zzz/icons/mob/clothing/under.dmi'
+	icon_state = "MI13_uniform"
+	can_adjust = FALSE
