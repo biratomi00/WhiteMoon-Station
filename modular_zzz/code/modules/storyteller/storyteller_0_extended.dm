@@ -21,6 +21,3 @@
 	threshold_major = 15000
 	threshold_crewset = 999999
 	threshold_ghostset = 999999
-
-
-

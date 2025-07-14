@@ -1,19 +1,17 @@
-/datum/controller/subsystem/vote/proc/check_combo()
-	var/list/roundtypes = list()
-	var/much_to_check = ROUNDTYPE_MAX_COMBO
-	log_world("SSpersistence.saved_modes contents:")
-	for (var/mode in SSpersistence.saved_modes)
-		log_world("- [mode]: [SSpersistence.saved_modes[mode]]")
+#define STORYTELLER_HISTORY_FILE "data/storyteller_history.json"
 
-	for (var/mode in SSpersistence.saved_modes)
-		if(!istext(mode))
-			continue
-		if(!much_to_check)
-			break
-		much_to_check--
-		if(!(mode in roundtypes))
-			roundtypes[mode] = 0
-		roundtypes[mode]++
-		if(roundtypes[mode] >= ROUNDTYPE_MAX_COMBO)
-			return mode
-	return FALSE
+/datum/controller/subsystem/persistence
+	var/list/storyteller_history = list()
+
+/datum/controller/subsystem/persistence/proc/load_storyteller_history()
+	if(fexists(STORYTELLER_HISTORY_FILE))
+		var/list/history = json_decode(file2text(STORYTELLER_HISTORY_FILE))
+		if(islist(history))
+			storyteller_history = history
+
+/datum/controller/subsystem/persistence/proc/save_storyteller_history()
+	if(islist(storyteller_history))
+		var/json = json_encode(storyteller_history)
+		var/file = file(STORYTELLER_HISTORY_FILE)
+		fdel(file)
+		WRITE_FILE(file, json)
