@@ -52,7 +52,7 @@
 	desc = "Alternative kazeshini cape."
 	icon_state = "sectac_w"
 
-/obj/item/clothing/suit/rev_mori
+/obj/item/clothing/neck/cloak/rev_mori
 	name = "Revento Mori jacket"
 	desc = "Revento Mori jacket, customised and tailored. The jacket is made of water-repellent materials, for extra protection of the outfit from water. The collar is embroidered with the company logo and embroidered initials E.W. There is also an embroidered cat's paw on the back"
 	icon = 'modular_zzz/icons/obj/clothing/suits.dmi'
