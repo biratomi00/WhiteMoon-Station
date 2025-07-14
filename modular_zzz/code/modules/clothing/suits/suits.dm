@@ -58,7 +58,19 @@
 	icon = 'modular_zzz/icons/obj/clothing/suits.dmi'
 	worn_icon = 'modular_zzz/icons/mob/clothing/suits.dmi'
 	worn_icon_digi = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	slot_flags = ITEM_SLOT_OCLOTHING|ITEM_SLOT_NECK
 	icon_state = "rev_mori"
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Revento Mori suit" = list(
+			RESKIN_ICON_STATE = "rev_mori",
+			RESKIN_WORN_ICON_STATE = "rev_mori_s"
+		),
+		"Revento Mori neck" = list(
+			RESKIN_ICON_STATE = "rev_mori",
+			RESKIN_WORN_ICON_STATE = "rev_mori_n"
+		)
+	)
 
 /obj/item/clothing/suit/montur
 	name = "Dark Montur"
