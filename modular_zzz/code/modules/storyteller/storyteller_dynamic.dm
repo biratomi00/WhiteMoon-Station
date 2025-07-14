@@ -5,12 +5,12 @@
 
 /proc/pick_dynamic_storyteller_type_by_chaos(list/players)
 	var/total_chaos = 0
-	for(var/ckey in players)
-		var/mob/player = GLOB.new_player_list[ckey]
-		if(player && player.client && player.client.prefs)
-			var/chaos = player.client.prefs.read_preference(/datum/preference/numeric/preferred_chaos_level)
-			if(isnum(chaos))
-				total_chaos += chaos
+	for(var/mob/player as anything in players)
+		if(!player || !player.client || !player.client.prefs)
+			continue
+		var/chaos = player.client.prefs.read_preference(/datum/preference/numeric/preferred_chaos_level)
+		if(isnum(chaos))
+			total_chaos += chaos
 
 	var/storyteller_type
 	if(total_chaos >= CONFIG_GET(number/chaos_for_a_hard_storyteller))

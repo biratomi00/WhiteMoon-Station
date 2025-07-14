@@ -734,11 +734,13 @@ SUBSYSTEM_DEF(gamemode)
 		else
 			stack_trace("Processing storyteller vote results failed! That's less than ideal. Using backup non-weighted result [voted_storyteller]")
 
-	if(istext(voted_storyteller) && voted_storyteller == /datum/storyteller/dynamic)
+	if(voted_storyteller == /datum/storyteller/dynamic)
 		var/list/players = list()
+
 		for(var/mob/dead/new_player/player as anything in GLOB.new_player_list)
 			if(player.ready == PLAYER_READY_TO_PLAY)
-				players += player.ckey
+				players += player
+
 		voted_storyteller = pick_dynamic_storyteller_type_by_chaos(players)
 		log_dynamic("Dynamic storyteller type selected: [voted_storyteller]")
 
