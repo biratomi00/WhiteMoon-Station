@@ -737,9 +737,8 @@ SUBSYSTEM_DEF(gamemode)
 	if(voted_storyteller == /datum/storyteller/dynamic)
 		var/list/players = list()
 
-		for(var/mob/dead/new_player/player as anything in GLOB.new_player_list)
-			if(player.ready == PLAYER_READY_TO_PLAY)
-				players += player
+		for(var/mob/dead/new_player/player as anything in GLOB.player_list)
+			players += player
 
 		voted_storyteller = pick_dynamic_storyteller_type_by_chaos(players)
 		log_dynamic("Dynamic storyteller type selected: [voted_storyteller]")
