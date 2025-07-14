@@ -15,6 +15,7 @@
 		TAG_HIGH = 0.5
 		)
 	antag_divisor = 16
+	votable = FALSE
 
 /datum/storyteller_data/tracks/med_chaos
 	threshold_mundane = 1500

@@ -10352,6 +10352,7 @@
 #include "modular_zzz\code\controllers\topic.dm"
 #include "modular_zzz\code\controllers\configuration\entries\bluemoon_config_entries.dm"
 #include "modular_zzz\code\controllers\configuration\entries\dbconfig.dm"
+#include "modular_zzz\code\controllers\subsystem\vote.dm"
 #include "modular_zzz\code\datums\sprite_accessories.dm"
 #include "modular_zzz\code\datums\world_topic.dm"
 #include "modular_zzz\code\datums\components\jukebox.dm"

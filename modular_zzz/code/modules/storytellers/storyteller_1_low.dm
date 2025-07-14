@@ -13,6 +13,7 @@
 		TAG_HIGH = 0.5
 	)
 	antag_divisor = 32
+	votable = FALSE
 
 /datum/storyteller_data/tracks/low_chaos
 	threshold_mundane = 2000
