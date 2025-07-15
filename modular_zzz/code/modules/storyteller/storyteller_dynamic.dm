@@ -20,5 +20,7 @@
 	else
 		storyteller_type = /datum/storyteller/low
 
-	message_admins("Выбранный Динамик: [storyteller_type]. Количество игроков - [players.len]. Уровень хаоса от игроков - [total_chaos].")
+	message_admins("Выбранный Динамик: [storyteller_type]. Количество игроков - [players.len]. \
+	Уровень хаоса от игроков - [total_chaos]. [CONFIG_GET(number/chaos_for_a_medium_storyteller)] \
+	было нужно для Медиум-Динамика. [CONFIG_GET(number/chaos_for_a_hard_storyteller)] было нужно для Хард-Динамика.")
 	return storyteller_type
