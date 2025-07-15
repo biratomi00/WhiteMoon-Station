@@ -13,10 +13,11 @@
 		TAG_HIGH = 0.5
 	)
 	antag_divisor = 32
+	votable = FALSE
 
 /datum/storyteller_data/tracks/low_chaos
-	threshold_mundane = 1200
-	threshold_moderate = 2400
-	threshold_major = 4800
-	threshold_crewset = 3600
-	threshold_ghostset = 3600
+	threshold_mundane = 2000
+	threshold_moderate = 2500
+	threshold_major = 3500
+	threshold_crewset = 4000
+	threshold_ghostset = 4000

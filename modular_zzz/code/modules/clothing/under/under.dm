@@ -1,3 +1,6 @@
+/obj/item/clothing/under/syndicate
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_DIGITIGRADE_MASK
+
 /obj/item/clothing/under/rank/security/officer/acradorsuit
 	name = "Underarmor suit"
 	desc= "A dark, tight suit for wearing underneath hard plates. It does not restrict movement and protects the body from rubbing by armor plates."

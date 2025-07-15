@@ -15,10 +15,11 @@
 		TAG_HIGH = 0.5
 		)
 	antag_divisor = 16
+	votable = FALSE
 
 /datum/storyteller_data/tracks/med_chaos
-	threshold_mundane = 900
-	threshold_moderate = 1800
-	threshold_major = 3900
-	threshold_crewset = 2400
+	threshold_mundane = 1500
+	threshold_moderate = 2000
+	threshold_major = 3000
+	threshold_crewset = 3000
 	threshold_ghostset = 3000
