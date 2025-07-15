@@ -20,4 +20,5 @@
 	else
 		storyteller_type = /datum/storyteller/low
 
+	message_admins("Выбранный Динамик: [voted_storyteller], уровень хаоса от игроков - [total_chaos].")
 	return storyteller_type
