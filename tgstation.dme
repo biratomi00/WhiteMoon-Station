@@ -10437,6 +10437,7 @@
 #include "modular_zzz\code\modules\clothing\outfits\ert_items.dm"
 #include "modular_zzz\code\modules\clothing\outfits\outfit.dm"
 #include "modular_zzz\code\modules\clothing\outfits\inteq\ert.dm"
+#include "modular_zzz\code\modules\clothing\spacesuits\pirate.dm"
 #include "modular_zzz\code\modules\clothing\storage\storage.dm"
 #include "modular_zzz\code\modules\clothing\suits\armor.dm"
 #include "modular_zzz\code\modules\clothing\suits\modsuits.dm"
