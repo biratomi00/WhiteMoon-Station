@@ -1,5 +1,0 @@
-author: "MysteryMan21333"
-delete-after: True
-changes:
-  - rscadd: "Adds seatbelts to wheelchairs."
-  - qol: "readjusts some of the behavior of wheelchairs on top of seatbelts for more cohesion and immersion."

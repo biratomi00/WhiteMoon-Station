@@ -1,6 +1,0 @@
-author: "Zattarra-Red"
-delete-after: True
-changes:
-  - rscadd: "High frequency blade now has hitsound modularity."
-  - bugfix: "High frequency blade provides block feedback properly."
-  - bugfix: "High frequency blade uses modern swing animation properly."
