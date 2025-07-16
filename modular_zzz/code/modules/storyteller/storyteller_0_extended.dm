@@ -2,7 +2,7 @@
 	name = "Extended (Very Low Chaos)"
 	desc = "Во время Extended-Раунда количество антагонистов минимально и они сильно ограничены, \
 	а также являются мирными, если не сказано обратного. Персонажи могут наслаждаться спокойным пребыванием на станции, \
-	либо игрой с мирными антагонистами с упором на ЕРП."
+	либо игрой с мирными антагонистами с упором на Ролевую Игру."
 	track_data = /datum/storyteller_data/tracks/extended_low_chaos
 	guarantees_roundstart_crewset = FALSE
 	tag_multipliers = list(
