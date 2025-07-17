@@ -10093,6 +10093,7 @@
 #include "modular_zzplurt\code\modules\customization\modules\mob\dead\new_player\sprite_accessories\underwear\socks.dm"
 #include "modular_zzplurt\code\modules\customization\modules\mob\dead\new_player\sprite_accessories\underwear\undershirts.dm"
 #include "modular_zzplurt\code\modules\customization\modules\mob\dead\new_player\sprite_accessories\underwear\underwear.dm"
+#include "modular_zzplurt\code\modules\customization\species\proteans\_proteans.species.dm"
 #include "modular_zzplurt\code\modules\cyborgs\dogborg_interactions.dm"
 #include "modular_zzplurt\code\modules\cyborgs\robot.dm"
 #include "modular_zzplurt\code\modules\cyborgs\robot_model.dm"
