@@ -41,7 +41,7 @@
 		/obj/item/mod/module/shove_blocker,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster/no_speedbost,
+		/obj/item/mod/module/welding/syndicate,
 		/obj/item/mod/module/jetpack/advanced,
 	)
 
@@ -61,7 +61,7 @@
 	siemens_coefficient = 0
 	slowdown_deployed = 0
 	ui_theme = "inteq"
-	inbuilt_modules = list(/obj/item/mod/module/armor_booster/no_speedbost)
+	inbuilt_modules = list(/obj/item/mod/module/welding/syndicate)
 	allowed_suit_storage = list(
 		/obj/item/restraints/handcuffs,
 		/obj/item/assembly/flash,
@@ -132,7 +132,7 @@
 	siemens_coefficient = 0
 	slowdown_deployed = 0
 	ui_theme = "inteq"
-	inbuilt_modules = list(/obj/item/mod/module/armor_booster/no_speedbost, /obj/item/mod/module/energy_shield/inteq)
+	inbuilt_modules = list(/obj/item/mod/module/welding/syndicate, /obj/item/mod/module/energy_shield/inteq)
 	allowed_suit_storage = list(
 		/obj/item/restraints/handcuffs,
 		/obj/item/assembly/flash,
