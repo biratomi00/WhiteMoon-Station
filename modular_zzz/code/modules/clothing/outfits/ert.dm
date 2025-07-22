@@ -291,7 +291,7 @@
 	l_hand = null
 	suit_store = /obj/item/gun/energy/pulse/loyalpin
 
-	implants = list(/obj/item/implant/deathrattle, /obj/item/implant/explosive/macro)
+	implants = list(/obj/item/implant/deathrattle, /obj/item/implant/weapons_auth, /obj/item/implant/explosive/macro)
 
 	cybernetic_implants = list(
 		/obj/item/organ/cyberimp/eyes/hud/security,
@@ -350,7 +350,7 @@
 		/obj/item/organ/cyberimp/chest/nutriment/plus,
 	)
 
-	implants = list(/obj/item/implant/deathrattle)
+	implants = list(/obj/item/implant/deathrattle, /obj/item/implant/weapons_auth, /obj/item/implant/explosive)
 
 /datum/outfit/centcom/ert/inteq/pre_equip(mob/living/carbon/human/H)
 	..()

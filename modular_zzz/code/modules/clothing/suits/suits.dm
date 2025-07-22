@@ -81,3 +81,7 @@
 	lefthand_file = 'modular_zzz/icons/mob/clothing/lefthand.dmi'
 	righthand_file = 'modular_zzz/icons/mob/clothing/righthand.dmi'
 	icon_state = "montur"
+
+/obj/item/clothing/suit/costume/striped_sweater
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	body_parts_covered = CHEST|ARMS

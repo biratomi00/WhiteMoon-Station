@@ -7,7 +7,7 @@
 #define BREASTS_MULTIPLIER 11000
 #define VAGINA_MULTIPLIER 250
 #define VAGINA_FLUID_REMOVAL_AMOUNT -0.05
-#define BASE_MULTIPLIER 5
+#define BASE_MULTIPLIER 10
 
 /datum/status_effect/body_fluid_regen
 	id = "body fluid regen"

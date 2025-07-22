@@ -34,15 +34,15 @@
 		/obj/item/mod/module/emp_shield,
 		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/jump_jet,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
+		/obj/item/mod/module/quick_cuff,
+		/obj/item/mod/module/shove_blocker,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster,
-		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/jump_jet,
+		/obj/item/mod/module/armor_booster/no_speedbost,
+		/obj/item/mod/module/jetpack/advanced,
 	)
 
 /datum/mod_theme/inteqe
@@ -57,11 +57,11 @@
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY
 	siemens_coefficient = 0
 	slowdown_deployed = 0
 	ui_theme = "inteq"
-	inbuilt_modules = list(/obj/item/mod/module/armor_booster)
+	inbuilt_modules = list(/obj/item/mod/module/armor_booster/no_speedbost)
 	allowed_suit_storage = list(
 		/obj/item/restraints/handcuffs,
 		/obj/item/assembly/flash,
@@ -109,24 +109,12 @@
 
 /obj/item/mod/control/pre_equipped/inteqe/elite
 	theme = /datum/mod_theme/inteqe/elite
-	starting_frequency = MODLINK_FREQ_CENTCOM
-	applied_cell = /obj/item/stock_parts/power_store/cell/bluespace
-	applied_modules = list(
-		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/shock_absorber,
-		/obj/item/mod/module/emp_shield,
-		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/jump_jet,
-		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/dna_lock,
-		/obj/item/mod/module/hat_stabilizer/syndicate,
-	)
-	default_pins = list(
-		/obj/item/mod/module/armor_booster,
-		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/jump_jet,
-	)
+
+/obj/item/mod/control/pre_equipped/inteqe/pirate
+	starting_frequency = MODLINK_FREQ_SYNDICATE
+
+/obj/item/mod/control/pre_equipped/inteqe/elite/pirate
+	starting_frequency = MODLINK_FREQ_SYNDICATE
 
 /datum/mod_theme/inteqe/elite
 	name = "inteq"
@@ -144,7 +132,7 @@
 	siemens_coefficient = 0
 	slowdown_deployed = 0
 	ui_theme = "inteq"
-	inbuilt_modules = list(/obj/item/mod/module/armor_booster, /obj/item/mod/module/energy_shield/inteq)
+	inbuilt_modules = list(/obj/item/mod/module/armor_booster/no_speedbost, /obj/item/mod/module/energy_shield/inteq)
 	allowed_suit_storage = list(
 		/obj/item/restraints/handcuffs,
 		/obj/item/assembly/flash,

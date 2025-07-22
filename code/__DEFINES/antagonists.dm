@@ -42,7 +42,7 @@
 ///Minimum amount the pirates will demand
 #define PAYOFF_MIN 20000
 ///How long pirates will wait for a response before attacking
-#define RESPONSE_MAX_TIME 2 MINUTES
+#define RESPONSE_MAX_TIME 5 MINUTES
 
 /// How long till a spessman should come back after being captured and sent to the holding facility (which some antags use)
 #define COME_BACK_FROM_CAPTURE_TIME 6 MINUTES
